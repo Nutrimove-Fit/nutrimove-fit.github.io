@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NutriMove Fit — Ernährung · Training · Tracking</title>
+  <meta name="description" content="NutriMove Fit: Deine All-in-One App für Ernährung, Training und Gesundheit. 50.000+ Rezepte, KI-Empfehlungen, Coaching-Pläne. Jetzt kostenlos starten!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header class="header" id="top">
+  <div class="container header__inner">
+    <a href="#top" class="header__logo">
+      <img src="nutrimove_logo.png" alt="NutriMove Fit" class="header__logo-img" />
+      <span class="header__logo-text">NutriMove <span class="accent">Fit</span></span>
+    </a>
+    <nav class="header__nav" id="mainNav">
+      <a href="#features">Features</a>
+      <a href="#chefpilot">ChefPilot</a>
+      <a href="#pricing">Preise</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Kontakt</a>
+      <a href="#legal" class="nav-legal">Rechtliches</a>
+    </nav>
+    <a href="#pricing" class="btn btn--sm btn--primary header__cta">Jetzt starten</a>
+    <button class="header__burger" id="navToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero">
+  <div class="hero__bg-glow"></div>
+  <div class="container hero__inner">
+    <div class="hero__content reveal">
+      <span class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Neu: Athlete Pro &amp; Club-Pläne verfügbar
+      </span>
+      <h1 class="hero__title">Gewohnheiten,<br>die dein Leben&nbsp;verändern.</h1>
+      <p class="hero__sub">NutriMove Fit vereint Meal-Tracking, 50&thinsp;000+ Rezepte, Coaching-Pläne und Leistungsanalysen in einer App — für Einzelpersonen, Athleten und Vereine.</p>
+      <div class="hero__actions">
+        <a href="#pricing" class="btn btn--primary btn--lg">Kostenlos starten</a>
+        <a href="#features" class="btn btn--ghost btn--lg">Features entdecken</a>
+      </div>
+      <p class="hero__trust">Keine Kreditkarte · Jederzeit kündbar · Swiss-made</p>
+      <!-- App Store Buttons -->
+      <div class="hero__stores">
+        <a href="#" class="store-badge" aria-label="App Store">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <div><small>Laden im</small><strong>App Store</strong></div>
+        </a>
+        <a href="#" class="store-badge" aria-label="Google Play">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m.91-.91L19.65 12l-1.92-2.21-2.27 2.27 2.26 2.15M6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
+          <div><small>Jetzt bei</small><strong>Google Play</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="hero__visual reveal reveal--delay">
+      <div class="hero__phone">
+        <div class="hero__phone-screen">
+          <!-- Mini status bar -->
+          <div class="phone-statusbar">
+            <span>9:41</span>
+            <div class="phone-statusbar__icons">
+              <span class="phone-signal">●●●●○</span>
+              <span class="phone-wifi">⚡</span>
+              <span class="phone-battery">87%</span>
+            </div>
+          </div>
+
+          <!-- App header -->
+          <div class="phone-app-header">
+            <img src="nutrimove_logo.png" alt="NutriMove" class="hero__phone-logo" />
+            <span class="phone-app-title">NutriMove <strong>Fit</strong></span>
+          </div>
+
+          <!-- Calorie Ring -->
+          <div class="phone-ring-section">
+            <svg class="phone-ring" viewBox="0 0 120 120" width="110" height="110">
+              <circle cx="60" cy="60" r="52" fill="none" stroke="#1E293B" stroke-width="8"/>
+              <circle cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="92" class="phone-ring__progress"/>
+              <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#AEEA00"/><stop offset="100%" stop-color="#76FF03"/></linearGradient></defs>
+            </svg>
+            <div class="phone-ring-text">
+              <span class="phone-ring-val">1 847</span>
+              <span class="phone-ring-lbl">kcal</span>
+            </div>
+          </div>
+
+          <!-- Macros -->
+          <div class="phone-macro-row">
+            <div class="phone-macro phone-macro--p"><div class="phone-macro-bar"><div class="phone-macro-bar__fill" style="width:78%" data-color="lime"></div></div><span class="phone-macro__val">124g</span><span class="phone-macro__lbl">Protein</span></div>
+            <div class="phone-macro phone-macro--c"><div class="phone-macro-bar"><div class="phone-macro-bar__fill" style="width:64%" data-color="cyan"></div></div><span class="phone-macro__val">198g</span><span class="phone-macro__lbl">Carbs</span></div>
+            <div class="phone-macro phone-macro--f"><div class="phone-macro-bar"><div class="phone-macro-bar__fill" style="width:52%" data-color="violet"></div></div><span class="phone-macro__val">61g</span><span class="phone-macro__lbl">Fett</span></div>
+          </div>
+
+          <!-- ★ WATER TRACKER ★ -->
+          <div class="phone-water">
+            <div class="phone-water__header">
+              <span class="phone-water__icon">💧</span>
+              <span class="phone-water__title">Wasserzähler</span>
+              <span class="phone-water__goal">Ziel: 2,50 L</span>
+            </div>
+            <div class="phone-water__amount">
+              <span class="phone-water__current" id="waterVal">2,13</span>
+              <span class="phone-water__unit">Liter</span>
+            </div>
+            <div class="phone-water__glasses">
+              <div class="water-glass filled" data-n="1"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
+              <div class="water-glass filled" data-n="2"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
+              <div class="water-glass filled" data-n="3"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
+              <div class="water-glass filled" data-n="4"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
+              <div class="water-glass filled" data-n="5"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
+              <div class="water-glass filled" data-n="6"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
+              <div class="water-glass filled" data-n="7"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
+              <div class="water-glass partial" data-n="8"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#1E293B" opacity=".5"/><path d="M5 14h14l-1.5 14H6.5z" fill="#38BDF8" opacity=".5"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#334155" stroke-width="1.5"/></svg></div>
+              <div class="water-glass empty" data-n="9"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#1E293B" opacity=".3"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#334155" stroke-width="1.5"/></svg></div>
+              <div class="water-glass add-btn" data-n="+"><svg viewBox="0 0 24 32"><circle cx="12" cy="16" r="10" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M12 11v10M7 16h10" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+            </div>
+            <div class="phone-water__wave">
+              <div class="wave-bar" style="--pct:85%"></div>
+            </div>
+            <span class="phone-water__food">+ Wasser aus Lebensmitteln: 120 ml</span>
+          </div>
+
+          <!-- ★ ACTIVITIES ★ -->
+          <div class="phone-activity">
+            <div class="phone-activity__header">
+              <span class="phone-activity__title">Aktivitäten</span>
+              <span class="phone-activity__more">Mehr</span>
+            </div>
+            <div class="phone-activity__card">
+              <div class="phone-activity__row">
+                <span class="phone-activity__emoji">👟</span>
+                <div class="phone-activity__info">
+                  <strong>Schritte</strong>
+                  <span>8 432 / 10 000</span>
+                </div>
+                <div class="phone-activity__ring-mini">
+                  <svg viewBox="0 0 36 36" width="32" height="32">
+                    <circle cx="18" cy="18" r="15" fill="none" stroke="#1E293B" stroke-width="3"/>
+                    <circle cx="18" cy="18" r="15" fill="none" stroke="#AEEA00" stroke-width="3" stroke-linecap="round" stroke-dasharray="94" stroke-dashoffset="16" transform="rotate(-90 18 18)"/>
+                  </svg>
+                  <span>84%</span>
+                </div>
+              </div>
+            </div>
+            <div class="phone-activity__card">
+              <div class="phone-activity__row">
+                <span class="phone-activity__emoji">🔥</span>
+                <div class="phone-activity__info">
+                  <strong>Kalorien verbrannt</strong>
+                  <span>461 kcal</span>
+                </div>
+              </div>
+            </div>
+            <div class="phone-activity__card phone-activity__card--thermo">
+              <div class="phone-activity__row">
+                <span class="phone-activity__emoji">🍳</span>
+                <div class="phone-activity__info">
+                  <strong>ChefPilot</strong>
+                  <span>Lachs-Bowl bereit · 24 min</span>
+                </div>
+                <span class="phone-activity__badge-new">NEU</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone bottom nav -->
+          <div class="phone-bottom-nav">
+            <span class="phone-bnav active">🏠</span>
+            <span class="phone-bnav">📊</span>
+            <span class="phone-bnav phone-bnav--add">＋</span>
+            <span class="phone-bnav">🍽️</span>
+            <span class="phone-bnav">👤</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ SOCIAL PROOF ══════════ -->
+<section class="stats">
+  <div class="container stats__inner">
+    <div class="stat reveal">
+      <span class="stat__num" data-target="50000">0</span><span class="stat__plus">+</span>
+      <span class="stat__label">Rezepte</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat__num" data-target="10">0</span><span class="stat__plus">+</span>
+      <span class="stat__label">Sportarten</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat__num" data-target="7">0</span>
+      <span class="stat__label">Abo-Modelle</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat__num" data-target="100">0</span><span class="stat__plus">%</span>
+      <span class="stat__label">Swiss-made</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FEATURES ══════════ -->
+<section id="features" class="features section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Alles in einer App</span>
+      <h2 class="section__title">Dein All-in-One-Tracker für<br>Ernährung, Fitness &amp; Gesundheit</h2>
+      <p class="section__sub">Ob Abnehmen, Muskelaufbau oder eine ausgewogene Ernährung — NutriMove Fit unterstützt dich mit intelligenten Tools.</p>
+    </div>
+    <div class="features__grid">
+      <article class="feature-card reveal">
+        <div class="feature-card__icon feature-card__icon--lime">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M9 9h6v6H9z"/></svg>
+        </div>
+        <h3>Meal-Tracking</h3>
+        <p>Logge Mahlzeiten, sieh Nährwerte auf einen Blick und plane deine Woche effizient vor. KI-gestütztes Food-Tracking für schnelle Erfassung.</p>
+      </article>
+      <article class="feature-card reveal">
+        <div class="feature-card__icon feature-card__icon--violet">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        </div>
+        <h3>50&thinsp;000+ Rezepte</h3>
+        <p>Personalisierte Vorschläge, automatische Einkaufsliste und detaillierte Nährwert-Tabellen — passend zu deinen Zielen und Allergien.</p>
+      </article>
+      <article class="feature-card reveal">
+        <div class="feature-card__icon feature-card__icon--cyan">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>Workouts &amp; Coaching</h3>
+        <p>12-Wochen-Pläne, Sport-spezifisches Tracking, interaktive Trainingsanleitungen und personalisierte Workout-Pläne.</p>
+      </article>
+      <article class="feature-card reveal">
+        <div class="feature-card__icon feature-card__icon--lime">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        </div>
+        <h3>Analysen &amp; Reports</h3>
+        <p>Wochen- und Monatstrends, Zielfortschritt, PDF/CSV-Export. Behalte stets den Überblick über deine Fortschritte.</p>
+      </article>
+      <article class="feature-card reveal">
+        <div class="feature-card__icon feature-card__icon--violet">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26"/></svg>
+        </div>
+        <h3>Athlete Pro</h3>
+        <p>Performance-Metriken, Periodisierung, Wettkampf-Vorbereitung, 10+ Sportarten und 24/7 Priority-Support mit Coach-Konsultation.</p>
+      </article>
+      <article class="feature-card reveal">
+        <div class="feature-card__icon feature-card__icon--cyan">
+          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <h3>Club-Management</h3>
+        <p>Unbegrenzte Mitglieder, Team-Funktionen, Custom Branding, API-Zugang, Event-Management und dedizierter Account-Manager.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HOW IT WORKS ══════════ -->
+<section class="how section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">So einfach geht's</span>
+      <h2 class="section__title">In 3 Schritten zum Ziel</h2>
+    </div>
+    <div class="how__steps">
+      <div class="how__step reveal">
+        <div class="how__num">1</div>
+        <h3>Registrieren</h3>
+        <p>Erstelle dein kostenloses Konto in unter 60 Sekunden. Keine Kreditkarte nötig.</p>
+      </div>
+      <div class="how__connector"></div>
+      <div class="how__step reveal">
+        <div class="how__num">2</div>
+        <h3>Ziele setzen</h3>
+        <p>Definiere deine persönlichen Ziele — Abnehmen, Muskelaufbau oder gesündere Ernährung.</p>
+      </div>
+      <div class="how__connector"></div>
+      <div class="how__step reveal">
+        <div class="how__num">3</div>
+        <h3>Ergebnisse sehen</h3>
+        <p>Tracke deine Mahlzeiten, folge deinem Plan und beobachte deine Fortschritte in Echtzeit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PRICING ══════════ -->
+<section id="pricing" class="pricing section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Preise</span>
+      <h2 class="section__title">Transparent &amp; fair — wähle deinen Plan</h2>
+      <p class="section__sub">Alle Preise in CHF. Automatische Verlängerung, jederzeit kündbar. Zahlung über Stripe.</p>
+    </div>
+
+    <div class="pricing__toggle reveal">
+      <button class="pricing__tab active" data-tab="individual">Einzelpersonen</button>
+      <button class="pricing__tab" data-tab="club">Vereine &amp; Clubs</button>
+    </div>
+
+    <!-- Individual -->
+    <div class="pricing__panel active" id="panel-individual">
+      <div class="pricing__grid">
+        <div class="price-card reveal">
+          <div class="price-card__head">
+            <h3>Free</h3>
+            <div class="price-card__price"><span class="price-card__amount">0</span><span class="price-card__currency">CHF</span></div>
+            <p class="price-card__period">Für immer kostenlos</p>
+          </div>
+          <ul class="price-card__features">
+            <li>Basis Meal-Logging (5 Einträge/Tag)</li>
+            <li>100 Rezepte durchsuchen</li>
+            <li>Basis Health-Dashboard</li>
+            <li>Community (nur lesen)</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--block">Kostenlos starten</a>
+        </div>
+        <div class="price-card reveal">
+          <div class="price-card__head">
+            <h3>Halbjahr</h3>
+            <div class="price-card__price"><span class="price-card__amount">16.50</span><span class="price-card__currency">CHF</span></div>
+            <p class="price-card__period">alle 6 Monate</p>
+          </div>
+          <ul class="price-card__features">
+            <li>Unbegrenztes Meal-Logging</li>
+            <li>50&thinsp;000+ Rezepte</li>
+            <li>Advanced Analytics</li>
+            <li>KI-Empfehlungen</li>
+            <li>Daten-Export (PDF/CSV)</li>
+            <li>Community &amp; E-Mail-Support</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--block">Plan wählen</a>
+        </div>
+        <div class="price-card price-card--featured reveal">
+          <span class="price-card__badge">Beliebt</span>
+          <div class="price-card__head">
+            <h3>Jahresabo</h3>
+            <div class="price-card__price"><span class="price-card__amount">29.90</span><span class="price-card__currency">CHF</span></div>
+            <p class="price-card__period">pro Jahr · ~CHF 2.49/Mt.</p>
+          </div>
+          <ul class="price-card__features">
+            <li>Alle Halbjahr-Features</li>
+            <li>12-Wochen Coaching-Pläne</li>
+            <li>Personalisierte Workouts</li>
+            <li>Monatliche Ernährungsberichte</li>
+            <li>Ziel-Tracking</li>
+            <li>Priority E-Mail-Support</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--block">Jetzt abonnieren</a>
+        </div>
+        <div class="price-card reveal">
+          <div class="price-card__head">
+            <h3>Athlete Pro</h3>
+            <div class="price-card__price"><span class="price-card__amount">45.–</span><span class="price-card__currency">CHF</span></div>
+            <p class="price-card__period">pro Jahr</p>
+          </div>
+          <ul class="price-card__features">
+            <li>Alle Jahresabo-Features</li>
+            <li>Performance-Metriken</li>
+            <li>10+ Sportarten-Tracking</li>
+            <li>Trainingsplan-Templates</li>
+            <li>Periodisierung &amp; Wettkampf</li>
+            <li>24/7 Priority-Support</li>
+            <li>Coach-Konsultation (In-App)</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--block">Plan wählen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Club -->
+    <div class="pricing__panel" id="panel-club">
+      <div class="pricing__grid pricing__grid--3">
+        <div class="price-card reveal">
+          <div class="price-card__head">
+            <h3>Club Basic</h3>
+            <div class="price-card__price"><span class="price-card__amount">249.–</span><span class="price-card__currency">CHF</span></div>
+            <p class="price-card__period">pro Jahr · ∞ Mitglieder</p>
+          </div>
+          <ul class="price-card__features">
+            <li>Basis Club-Management</li>
+            <li>Member-Dashboard</li>
+            <li>Bis 5 Admin-User</li>
+            <li>Basis Reporting</li>
+            <li>API-Zugang (limitiert)</li>
+            <li>E-Mail-Support</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--block">Anfragen</a>
+        </div>
+        <div class="price-card price-card--featured reveal">
+          <span class="price-card__badge">Empfohlen</span>
+          <div class="price-card__head">
+            <h3>Club Pro</h3>
+            <div class="price-card__price"><span class="price-card__amount">449.–</span><span class="price-card__currency">CHF</span></div>
+            <p class="price-card__period">pro Jahr · ∞ Mitglieder</p>
+          </div>
+          <ul class="price-card__features">
+            <li>Alles aus Club Basic</li>
+            <li>Erweiterte Trainer-Tools</li>
+            <li>Team- &amp; Gruppen-Funktionen</li>
+            <li>Advanced Analytics &amp; Reports</li>
+            <li>Bis 10 Admin-User</li>
+            <li>Custom Branding</li>
+            <li>Event-Management</li>
+            <li>Voller API-Zugang</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary btn--block">Anfragen</a>
+        </div>
+        <div class="price-card reveal">
+          <div class="price-card__head">
+            <h3>Club Elite</h3>
+            <div class="price-card__price"><span class="price-card__amount">749.–</span><span class="price-card__currency">CHF</span></div>
+            <p class="price-card__period">pro Jahr · ∞ Mitglieder</p>
+          </div>
+          <ul class="price-card__features">
+            <li>Alles aus Club Pro</li>
+            <li>White-Label-Optionen</li>
+            <li>Custom Integrationen</li>
+            <li>Unbegrenzte Admins</li>
+            <li>Dedizierter Account-Manager</li>
+            <li>24/7 Telefon- &amp; E-Mail-Support</li>
+            <li>Custom Feature Development</li>
+          </ul>
+          <a href="#contact" class="btn btn--outline btn--block">Anfragen</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparison -->
+    <details class="compare reveal">
+      <summary class="compare__toggle">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        Vollständige Vergleichstabelle
+      </summary>
+      <div class="compare__body">
+        <table>
+          <thead><tr><th>Feature</th><th>Free</th><th>Halbjahr</th><th>Jahres&shy;abo</th><th>Athlete&nbsp;Pro</th><th>Club&nbsp;Basic</th><th>Club&nbsp;Pro</th><th>Club&nbsp;Elite</th></tr></thead>
+          <tbody>
+            <tr><td>Preis</td><td>CHF 0</td><td>CHF 16.50</td><td>CHF 29.90</td><td>CHF 45.–</td><td>CHF 249.–</td><td>CHF 449.–</td><td>CHF 749.–</td></tr>
+            <tr><td>Laufzeit</td><td>—</td><td>6 Mt.</td><td>12 Mt.</td><td>12 Mt.</td><td>12 Mt.</td><td>12 Mt.</td><td>12 Mt.</td></tr>
+            <tr><td>Meal-Logging</td><td>5/Tag</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr>
+            <tr><td>Rezepte</td><td>100</td><td>50 000+</td><td>50 000+</td><td>50 000+</td><td>50 000+</td><td>50 000+</td><td>50 000+</td></tr>
+            <tr><td>Analytics</td><td>Basis</td><td>Advanced</td><td>Advanced</td><td>Advanced</td><td>Basis</td><td>Advanced</td><td>Premium</td></tr>
+            <tr><td>Coaching</td><td>✗</td><td>✗</td><td>✓</td><td>✓</td><td>✗</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Athlete</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td><td>✗</td><td>✗</td><td>✓</td></tr>
+            <tr><td>Club</td><td>✗</td><td>✗</td><td>✗</td><td>✗</td><td>Basis</td><td>Voll</td><td>Premium</td></tr>
+            <tr><td>API</td><td>✗</td><td>✗</td><td>✗</td><td>✗</td><td>Limitiert</td><td>Voll</td><td>Voll</td></tr>
+            <tr><td>Support</td><td>Community</td><td>E-Mail</td><td>E-Mail</td><td>24/7</td><td>E-Mail</td><td>Priority</td><td>24/7 Dediz.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section class="testimonials section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Community</span>
+      <h2 class="section__title">Was unsere Nutzer sagen</h2>
+    </div>
+    <div class="testimonials__grid">
+      <blockquote class="testimonial reveal">
+        <div class="testimonial__stars">★★★★★</div>
+        <p>«NutriMove Fit hat mein Essverhalten komplett verändert. Die Rezeptvorschläge sind genial und das Tracking geht super schnell.»</p>
+        <footer><strong>Lea M.</strong><span>Zürich · Member Jahresabo</span></footer>
+      </blockquote>
+      <blockquote class="testimonial reveal">
+        <div class="testimonial__stars">★★★★★</div>
+        <p>«Als Trainer nutze ich die Club-Funktionen täglich. Meine Athleten können ihre Ernährung direkt in der App erfassen — perfekt für unser Team.»</p>
+        <footer><strong>Marco T.</strong><span>Basel · Club Pro</span></footer>
+      </blockquote>
+      <blockquote class="testimonial reveal">
+        <div class="testimonial__stars">★★★★★</div>
+        <p>«Endlich eine App, die wirklich alle Makros richtig trackt. Die Performance-Metriken im Athlete Pro sind ein Game-Changer für mein Training.»</p>
+        <footer><strong>Sarah K.</strong><span>Bern · Athlete Pro</span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq" class="faq section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Hilfe</span>
+      <h2 class="section__title">Häufige Fragen</h2>
+    </div>
+    <div class="faq__list">
+      <details class="faq__item reveal"><summary>Kann ich jederzeit kündigen?</summary><p>Ja. Du kannst dein Abo jederzeit in den Kontoeinstellungen deaktivieren. Die Kündigung wird zum Ende der aktuellen Laufzeit wirksam.</p></details>
+      <details class="faq__item reveal"><summary>Wie bezahle ich?</summary><p>Zahlungen laufen sicher über <strong>Stripe</strong>. Wir speichern keine Kreditkartendaten — alles wird direkt von Stripe verschlüsselt verarbeitet.</p></details>
+      <details class="faq__item reveal"><summary>Gibt es eine Testphase?</summary><p>Der Free-Plan bleibt dauerhaft kostenlos. Für Premium-Features kannst du jederzeit upgraden — keine versteckten Kosten, kein Vertragszwang.</p></details>
+      <details class="faq__item reveal"><summary>Ist die App medizinische Beratung?</summary><p>Nein. NutriMove Fit dient der allgemeinen Information und ersetzt keine ärztliche Beratung. Siehe unseren <a href="#impressum">Haftungshinweis</a>.</p></details>
+      <details class="faq__item reveal"><summary>Was passiert mit meinen Daten?</summary><p>Alle Details findest du in unserer <a href="#datenschutz">Datenschutzerklärung</a>. Kurzfassung: Kein Tracking, keine Drittanbieter-Cookies, Daten jederzeit exportierbar und löschbar.</p></details>
+      <details class="faq__item reveal"><summary>In welchen Ländern ist NutriMove Fit verfügbar?</summary><p>NutriMove Fit ist weltweit verfügbar. Der Dienst wird in der Schweiz betrieben und unterliegt Schweizer Datenschutzrecht.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CHEFPILOT SHOWCASE ══════════ -->
+<section id="chefpilot" class="chefpilot section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Exklusiv · ChefPilot-Programm</span>
+      <h2 class="section__title">Dein digitaler Küchen-Assistent.<br>Intelligent. Automatisch. Perfekt.</h2>
+      <p class="section__sub">Step-by-Step Rezeptführung mit Timer, Temperatur, Geschwindigkeit und Nährwert-Berechnung — wie ein Profi-Koch an deiner Seite.</p>
+    </div>
+    <div class="chefpilot__showcase">
+      <!-- Left: Feature List -->
+      <div class="chefpilot__features reveal reveal--left">
+        <div class="cp-feature">
+          <div class="cp-feature__icon">⏱️</div>
+          <div>
+            <h4>Automatische Timer &amp; Temperaturen</h4>
+            <p>Jeder Schritt steuert Zeit, °C, Modus und Geschwindigkeit automatisch. Du folgst einfach der Anleitung.</p>
+          </div>
+        </div>
+        <div class="cp-feature">
+          <div class="cp-feature__icon">📊</div>
+          <div>
+            <h4>Exakte Nährwert-Berechnung</h4>
+            <p>Kalorien, Makros und Mikronährstoffe werden pro Portion berechnet — nie wieder 0-Kalorien-Fehler.</p>
+          </div>
+        </div>
+        <div class="cp-feature">
+          <div class="cp-feature__icon">✨</div>
+          <div>
+            <h4>Nutri-Spark — Dein Assistent</h4>
+            <p>Unser KI-Maskottchen begleitet jeden Kochschritt mit Animationen, Tipps und Motivations-Feedback.</p>
+          </div>
+        </div>
+        <div class="cp-feature">
+          <div class="cp-feature__icon">❤️</div>
+          <div>
+            <h4>HealthKit &amp; Google Fit Sync</h4>
+            <p>Gekochte Mahlzeiten werden automatisch in Apple Health / Google Fit geschrieben.</p>
+          </div>
+        </div>
+        <div class="cp-feature">
+          <div class="cp-feature__icon">📶</div>
+          <div>
+            <h4>Offline-Modus</h4>
+            <p>Koche komplett ohne Internet. Alle Rezepte, Timer und Berechnungen funktionieren lokal.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Phone Mockup with ChefPilot UI -->
+      <div class="chefpilot__phone reveal reveal--right">
+        <div class="hero__phone hero__phone--cp">
+          <div class="hero__phone-screen">
+            <div class="cp-screen">
+              <div class="cp-screen__header">
+                <span class="cp-screen__back">←</span>
+                <span class="cp-screen__title">ChefPilot</span>
+                <span class="cp-screen__step">Schritt 3/6</span>
+              </div>
+              <div class="cp-screen__recipe">Lachs-Bowl mit Avocado</div>
+              <div class="cp-screen__visual">
+                <div class="cp-pot">
+                  <div class="cp-pot__body">
+                    <div class="cp-pot__steam steam-1"></div>
+                    <div class="cp-pot__steam steam-2"></div>
+                    <div class="cp-pot__steam steam-3"></div>
+                    <div class="cp-pot__liquid"></div>
+                    <div class="cp-pot__blade"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="cp-screen__params">
+                <div class="cp-param"><span class="cp-param__val">85°C</span><span class="cp-param__lbl">Temp</span></div>
+                <div class="cp-param"><span class="cp-param__val">4:30</span><span class="cp-param__lbl">Timer</span></div>
+                <div class="cp-param"><span class="cp-param__val">Stufe 4</span><span class="cp-param__lbl">Speed</span></div>
+                <div class="cp-param"><span class="cp-param__val">Dampf</span><span class="cp-param__lbl">Modus</span></div>
+              </div>
+              <div class="cp-screen__progress">
+                <div class="cp-progress-bar"><div class="cp-progress-bar__fill" style="width:50%"></div></div>
+              </div>
+              <p class="cp-screen__instruction">Lachs in den Varoma einlegen und Dampfgaren starten. Deckel geschlossen halten.</p>
+              <div class="cp-screen__mascot">
+                <div class="nutri-spark">
+                  <div class="spark-body"></div>
+                  <div class="spark-eye spark-eye--l"></div>
+                  <div class="spark-eye spark-eye--r"></div>
+                  <div class="spark-glow"></div>
+                </div>
+                <span class="cp-screen__mascot-text">Perfekt! Weiter so! 🔥</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA BANNER ══════════ -->
+<section class="cta-banner">
+  <div class="container cta-banner__inner reveal">
+    <h2>Bereit für Ergebnisse?<br>Starte noch heute mit deinem Plan.</h2>
+    <p>Erstelle dein kostenloses Konto und entdecke, wie NutriMove Fit dein Leben verändern kann.</p>
+    <div class="cta-banner__buttons">
+      <a href="#pricing" class="btn btn--primary btn--lg">Jetzt kostenlos starten</a>
+    </div>
+    <div class="cta-banner__stores">
+      <a href="#" class="store-badge store-badge--dark" aria-label="App Store">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <div><small>Laden im</small><strong>App Store</strong></div>
+      </a>
+      <a href="#" class="store-badge store-badge--dark" aria-label="Google Play">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.59.34-1.11.84-1.35L13.69 12l-9.85 9.85c-.5-.24-.84-.76-.84-1.35m13.81-5.38L6.05 21.34l8.49-8.49 2.27 2.27m.91-.91L19.65 12l-1.92-2.21-2.27 2.27 2.26 2.15M6.05 2.66l10.76 6.22-2.27 2.27-8.49-8.49z"/></svg>
+        <div><small>Jetzt bei</small><strong>Google Play</strong></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact" class="contact section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Kontakt</span>
+      <h2 class="section__title">Wir sind für dich da</h2>
+    </div>
+    <div class="contact__grid">
+      <form id="contactForm" class="contact__form reveal">
+        <div class="form-group"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Dein Name" required /></div>
+        <div class="form-group"><label for="email">E-Mail</label><input id="email" name="email" type="email" placeholder="deine@email.ch" required /></div>
+        <div class="form-group"><label for="message">Nachricht</label><textarea id="message" name="message" rows="5" placeholder="Wie können wir dir helfen?"></textarea></div>
+        <button type="submit" class="btn btn--primary btn--block">Nachricht senden</button>
+        <div id="formMsg" class="form-msg" aria-live="polite"></div>
+      </form>
+      <div class="contact__info reveal">
+        <div class="contact__info-card">
+          <h3>NutriMove Fit</h3>
+          <p>Mamadou Balde<br>Freiestrasse 100<br>8032 Zürich, Schweiz</p>
+        </div>
+        <div class="contact__info-card">
+          <h4>E-Mail</h4>
+          <p><strong>Allgemein:</strong> info@nutrimove.ch<br><strong>Support:</strong> support@nutrimove.ch<br><strong>Datenschutz:</strong> privacy@nutrimove.ch<br><strong>Rechtlich:</strong> legal@nutrimove.ch</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ LEGAL ══════════ -->
+<section id="legal" class="legal section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Rechtliches</span>
+      <h2 class="section__title">AGB · Datenschutz · Impressum</h2>
+    </div>
+    <div class="legal__tabs reveal">
+      <button class="legal__tab active" data-legal="agb">AGB</button>
+      <button class="legal__tab" data-legal="datenschutz">Datenschutz</button>
+      <button class="legal__tab" data-legal="impressum">Impressum</button>
+    </div>
+
+    <!-- AGB -->
+    <article id="agb" class="legal__panel active reveal">
+      <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
+      <p class="legal__date">Gültig ab: 22. Februar 2026</p>
+      <h3>1. Anbietende Partei und Geltungsbereich</h3>
+      <p><strong>Unternehmen:</strong> NutriMove Fit · <strong>Inhaber:</strong> Mamadou Balde · <strong>Adresse:</strong> Freiestrasse 100, 8032 Zürich, Schweiz · <strong>E-Mail:</strong> legal@nutrimove.ch · <strong>Support:</strong> support@nutrimove.ch</p>
+      <p>Diese AGB gelten für sämtliche Nutzerinnen und Nutzer, die den Dienst NutriMove Fit verwenden. Mit der Registrierung oder Nutzung des Dienstes erklären sich Kundinnen und Kunden mit diesen AGB einverstanden.</p>
+      <h3>2. Leistungsbeschreibung</h3>
+      <ul><li>Verwaltung von Benutzerkonten und Profildaten</li><li>Ernährungs- und Trainingsfunktionen (Planung, Protokollierung, Auswertungen)</li><li>Kommunikation zwischen Kundinnen/Kunden und Trainerinnen/Trainern</li><li>Upload-Funktionen (z.&nbsp;B. Technik- und Trainingsvideos)</li><li>Optional: KI-gestützte Assistenzfunktionen</li></ul>
+      <p>Der Dienst stellt Informationen, Vorlagen und Werkzeuge bereit. <strong>Er ersetzt keine medizinische, therapeutische oder ernährungswissenschaftliche Beratung.</strong></p>
+      <h3>3. Registrierung und Benutzerkonto</h3>
+      <p>Für bestimmte Funktionen ist eine Registrierung erforderlich. Kundinnen und Kunden sind verpflichtet, wahrheitsgemässe Angaben zu machen und ihre Zugangsdaten vertraulich zu behandeln. Der Anbieter kann Konten sperren oder löschen bei Missbrauch oder Verstössen gegen diese AGB.</p>
+      <h3>4. Gesundheitshinweis und Haftungsausschluss</h3>
+      <p>Die Inhalte dienen ausschliesslich der allgemeinen Information. Der Dienst ist <strong>nicht</strong> zur Diagnose, Behandlung oder Prävention von Krankheiten bestimmt. Kundinnen und Kunden sind selbst verantwortlich, vor der Umsetzung von Empfehlungen ärztlichen Rat einzuholen — insbesondere bei gesundheitlichen Einschränkungen, Schwangerschaft, chronischen Erkrankungen oder Medikamenteneinnahme.</p>
+      <h3>5. Nutzungsregeln</h3>
+      <p>Untersagt sind: unbefugter Zugriff auf Systeme/APIs, Umgehung von Sicherheitsmechanismen, Verbreitung schädlicher Inhalte, Hochladen von Inhalten ohne entsprechende Rechte.</p>
+      <h3>6. Inhalte und Rechte</h3>
+      <p>Kundinnen und Kunden behalten die Rechte an ihren hochgeladenen Inhalten. Mit dem Hochladen wird dem Anbieter das Recht eingeräumt, Inhalte technisch zu speichern und an berechtigte Empfänger anzuzeigen.</p>
+      <h3>7. Verfügbarkeit und Änderungen</h3>
+      <p>Der Anbieter bemüht sich um hohe Verfügbarkeit, schuldet jedoch keine unterbrechungsfreie Bereitstellung. Funktionen können geändert oder eingestellt werden.</p>
+      <h3>8. Preise und Zahlungsbedingungen</h3>
+      <p>Es gelten die zum Zeitpunkt des Vertragsabschlusses angezeigten Preise (CHF). Zahlungen werden über <strong>Stripe</strong> abgewickelt. Abonnements verlängern sich automatisch, Kündigung jederzeit möglich. Bei Zahlungsverzug kann der Zugang eingeschränkt werden.</p>
+      <h3>9. Vertragsdauer und Kündigung</h3>
+      <p>Der Vertrag beginnt mit Registrierung/Aktivierung. Kündigung und Datenlöschung sind jederzeit möglich, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+      <h3>10. Gewährleistung und Haftung</h3>
+      <p>Haftung bei Vorsatz oder grober Fahrlässigkeit. Bei leichter Fahrlässigkeit nur bei Kardinalpflichten. Haftung für indirekte Schäden, entgangenen Gewinn oder Datenverlust ist ausgeschlossen. Haftung für Personenschäden bleibt unberührt.</p>
+      <h3>11. Datenschutz</h3>
+      <p>Die Verarbeitung personenbezogener Daten ist in der <a href="#datenschutz">Datenschutzerklärung</a> geregelt.</p>
+      <h3>12. Schlussbestimmungen</h3>
+      <p>Es gilt <strong>Schweizer Recht</strong>. Gerichtsstand: Zürich, Schweiz. Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit der übrigen unberührt. Änderungen werden angekündigt.</p>
+    </article>
+
+    <!-- DATENSCHUTZ -->
+    <article id="datenschutz" class="legal__panel">
+      <h2>Datenschutzerklärung</h2>
+      <p class="legal__date">Letzte Aktualisierung: 22. Februar 2026</p>
+      <h3>1. Verantwortliche Stelle</h3>
+      <p><strong>NutriMove Fit</strong> · Mamadou Balde · Freiestrasse 100, 8032 Zürich · privacy@nutrimove.ch</p>
+      <h3>2. Welche Daten wir verarbeiten</h3>
+      <ul><li><strong>Kontodaten:</strong> E-Mail, Passwort-Hash, Anzeigename</li><li><strong>Profildaten (optional):</strong> Körperdaten, Ziele, Allergien</li><li><strong>Nutzungsdaten:</strong> IP-Adresse, Zeitstempel, Request-IDs</li><li><strong>Uploads:</strong> Inhalte, Metadaten</li><li><strong>Zahlungsdaten:</strong> Transaktions-IDs via Stripe (keine vollständigen Kartennummern)</li><li><strong>Kommunikation:</strong> Support-Anfragen, Trainer-Nachrichten</li></ul>
+      <h3>3. Zwecke der Verarbeitung</h3>
+      <p>Bereitstellung und Betrieb des Dienstes, Authentifizierung und Sicherheit, Zahlungsabwicklung über Stripe, Vertragserfüllung, Support und Weiterentwicklung.</p>
+      <h3>4. Rechtsgrundlagen</h3>
+      <p>Verarbeitung nach Schweizer DSG (Vertragserfüllung, berechtigte Interessen, Einwilligung). Für EU-/EWR-Nutzer gilt zusätzlich die DSGVO.</p>
+      <h3>5. Empfänger</h3>
+      <p>Hosting-/Infrastruktur-Anbieter, Stripe Inc. (USA, Standardvertragsklauseln), E-Mail-Dienstleister, zugewiesene Trainer. <strong>Wir verkaufen keine Daten.</strong></p>
+      <h3>6. Speicherung</h3>
+      <table class="legal-table"><tr><td>Kontodaten</td><td>Bis Kontolöschung</td></tr><tr><td>Protokolldaten</td><td>30 Tage</td></tr><tr><td>Zahlungs-/Buchhaltungsdaten</td><td>7 Jahre (CH-Recht)</td></tr><tr><td>Uploads</td><td>Bis Löschung durch User</td></tr></table>
+      <h3>7. Sicherheit</h3>
+      <p>HTTPS, bcrypt-Hashing, Rate-Limiting, rollenbasierte Zugangskontrollen, regelmässige Prüfungen.</p>
+      <h3>8. Cookies</h3>
+      <p>Nur essentielle Sitzungscookies für Login. <strong>Kein Analytics-Tracking, keine Drittanbieter-Cookies.</strong></p>
+      <h3>9. Deine Rechte</h3>
+      <ul><li><strong>Auskunft</strong> (Art. 25 DSG / Art. 15 DSGVO) — privacy@nutrimove.ch</li><li><strong>Berichtigung</strong> — In-App oder per E-Mail</li><li><strong>Löschung</strong> — privacy@nutrimove.ch, Betreff «Löschantrag»</li><li><strong>Datenportabilität</strong> — In-App Export (PDF/CSV)</li><li><strong>Widerspruch</strong> — Marketing jederzeit abmeldbar</li><li><strong>Beschwerde</strong> — EDÖB (Schweiz), zuständige EU-Behörde</li></ul>
+      <h3>10. Datenübermittlung ins Ausland</h3>
+      <p>Bei Hosting ausserhalb der Schweiz: Standardvertragsklauseln und EDÖB-konforme Garantien.</p>
+      <h3>11. Änderungen</h3>
+      <p>Diese Datenschutzerklärung kann angepasst werden. Die aktuelle Fassung ist stets hier abrufbar.</p>
+    </article>
+
+    <!-- IMPRESSUM -->
+    <article id="impressum" class="legal__panel">
+      <h2>Impressum</h2>
+      <p class="legal__date">Stand: 22. Februar 2026</p>
+      <h3>Angaben gemäss Art. 3 UWG / Art. 5 DSG</h3>
+      <p><strong>NutriMove Fit</strong> — Einzelunternehmen (CH-OR)<br><strong>Inhaber:</strong> Mamadou Balde<br><strong>Adresse:</strong> Freiestrasse 100, 8032 Zürich, Schweiz<br><strong>Allgemein:</strong> info@nutrimove.ch · <strong>Support:</strong> support@nutrimove.ch<br><strong>Rechtlich:</strong> legal@nutrimove.ch · <strong>Datenschutz:</strong> privacy@nutrimove.ch</p>
+      <h3>Handelsregister</h3>
+      <p>Kanton Zürich · UID: CHE-[wird nachgetragen] · Aufsichtsbehörde: EDÖB</p>
+      <h3>Haftungsausschluss</h3>
+      <p>Alle Inhalte werden <strong>ohne Gewähr</strong> bereitgestellt. NutriMove Fit übernimmt keine Haftung für die Anwendung bereitgestellter Empfehlungen, Schäden oder technische Störungen. Der Dienst ersetzt <strong>keine medizinische Beratung</strong>. Jede Nutzerin und jeder Nutzer handelt auf eigenes Risiko.</p>
+      <p>Soweit gesetzlich zulässig, ist jede Haftung für direkte, indirekte, zufällige oder Folgeschäden ausgeschlossen.</p>
+      <h3>Zahlungen &amp; Stripe</h3>
+      <p>Zahlungen werden über Stripe abgewickelt. Bei Fragen: support@nutrimove.ch</p>
+      <h3>Urheberrecht</h3>
+      <p>Sämtliche Inhalte (Texte, Grafiken, Logos, Software) sind urheberrechtlich geschützt. Vervielfältigung nur mit schriftlicher Genehmigung.</p>
+      <h3>Anwendbares Recht</h3>
+      <p><strong>Schweizer Recht</strong> · Gerichtsstand: Zürich, Schweiz</p>
+    </article>
+  </div>
+</section>
+
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#top" class="footer__logo">
+        <img src="nutrimove_logo.png" alt="NutriMove Fit" class="footer__logo-img" />
+        <span>NutriMove <span class="accent">Fit</span></span>
+      </a>
+      <p class="footer__tagline">Dein All-in-One Tracker für Ernährung, Fitness &amp; Gesundheit.</p>
+    </div>
+    <div class="footer__links">
+      <div class="footer__col">
+        <h4>Produkt</h4>
+        <a href="#features">Features</a>
+        <a href="#chefpilot">ChefPilot</a>
+        <a href="#pricing">Preise</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Entdecken</h4>
+        <a href="#top">Über uns</a>
+        <a href="#testimonials">Erfolgsgeschichten</a>
+        <a href="#features">Kalorientabelle</a>
+        <a href="#faq">Hilfe</a>
+        <a href="#pricing">Rechner</a>
+      </div>
+      <div class="footer__col">
+        <h4>Rechtliches</h4>
+        <a href="#agb">AGB</a>
+        <a href="#datenschutz">Datenschutz</a>
+        <a href="#impressum">Impressum</a>
+      </div>
+      <div class="footer__col">
+        <h4>Kontakt</h4>
+        <a href="mailto:info@nutrimove.ch">info@nutrimove.ch</a>
+        <a href="mailto:support@nutrimove.ch">support@nutrimove.ch</a>
+        <a href="#contact">Kontaktformular</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <p>&copy; 2026 NutriMove Fit · Mamadou Balde · Zürich, Schweiz</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
