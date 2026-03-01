@@ -73,128 +73,6 @@
         </a>
       </div>
     </div>
-    <div class="hero__visual reveal reveal--delay">
-      <div class="hero__phone">
-        <div class="hero__phone-screen">
-          <!-- Mini status bar -->
-          <div class="phone-statusbar">
-            <span>9:41</span>
-            <div class="phone-statusbar__icons">
-              <span class="phone-signal">●●●●○</span>
-              <span class="phone-wifi">⚡</span>
-              <span class="phone-battery">87%</span>
-            </div>
-          </div>
-
-          <!-- App header -->
-          <div class="phone-app-header">
-            <img src="nutrimove_logo.png" alt="Nutrimove" class="hero__phone-logo" />
-            <span class="phone-app-title">Nutrimove <strong>Fit</strong></span>
-          </div>
-
-          <!-- Calorie Ring -->
-          <div class="phone-ring-section">
-            <svg class="phone-ring" viewBox="0 0 120 120" width="110" height="110">
-              <circle cx="60" cy="60" r="52" fill="none" stroke="#1E293B" stroke-width="8"/>
-              <circle cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="92" class="phone-ring__progress"/>
-              <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#AEEA00"/><stop offset="100%" stop-color="#76FF03"/></linearGradient></defs>
-            </svg>
-            <div class="phone-ring-text">
-              <span class="phone-ring-val">1 847</span>
-              <span class="phone-ring-lbl">kcal</span>
-            </div>
-          </div>
-
-          <!-- Macros -->
-          <div class="phone-macro-row">
-            <div class="phone-macro phone-macro--p"><div class="phone-macro-bar"><div class="phone-macro-bar__fill macro-78" data-color="lime"></div></div><span class="phone-macro__val">124g</span><span class="phone-macro__lbl">Protein</span></div>
-            <div class="phone-macro phone-macro--c"><div class="phone-macro-bar"><div class="phone-macro-bar__fill macro-64" data-color="cyan"></div></div><span class="phone-macro__val">198g</span><span class="phone-macro__lbl">Carbs</span></div>
-            <div class="phone-macro phone-macro--f"><div class="phone-macro-bar"><div class="phone-macro-bar__fill macro-52" data-color="violet"></div></div><span class="phone-macro__val">61g</span><span class="phone-macro__lbl">Fett</span></div>
-          </div>
-
-          <!-- ★ WATER TRACKER ★ -->
-          <div class="phone-water">
-            <div class="phone-water__header">
-              <span class="phone-water__icon">💧</span>
-              <span class="phone-water__title">Wasserzähler</span>
-              <span class="phone-water__goal">Ziel: 2,50 L</span>
-            </div>
-            <div class="phone-water__amount">
-              <span class="phone-water__current" id="waterVal">2,13</span>
-              <span class="phone-water__unit">Liter</span>
-            </div>
-            <div class="phone-water__glasses">
-              <div class="water-glass filled" data-n="1"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
-              <div class="water-glass filled" data-n="2"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
-              <div class="water-glass filled" data-n="3"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
-              <div class="water-glass filled" data-n="4"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
-              <div class="water-glass filled" data-n="5"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
-              <div class="water-glass filled" data-n="6"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
-              <div class="water-glass filled" data-n="7"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#38BDF8" opacity=".85"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#0EA5E9" stroke-width="1.5"/><ellipse cx="12" cy="5" rx="8" ry="2" fill="#7DD3FC" opacity=".4"/></svg></div>
-              <div class="water-glass partial" data-n="8"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#1E293B" opacity=".5"/><path d="M5 14h14l-1.5 14H6.5z" fill="#38BDF8" opacity=".5"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#334155" stroke-width="1.5"/></svg></div>
-              <div class="water-glass empty" data-n="9"><svg viewBox="0 0 24 32"><path d="M4 4h16l-2 24H6z" fill="#1E293B" opacity=".3"/><path d="M4 4h16l-2 24H6z" fill="none" stroke="#334155" stroke-width="1.5"/></svg></div>
-              <div class="water-glass add-btn" data-n="+"><svg viewBox="0 0 24 32"><circle cx="12" cy="16" r="10" fill="none" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M12 11v10M7 16h10" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-            </div>
-            <div class="phone-water__wave">
-              <div class="wave-bar wave-85"></div>
-            </div>
-            <span class="phone-water__food">+ Wasser aus Lebensmitteln: 120 ml</span>
-          </div>
-
-          <!-- ★ ACTIVITIES ★ -->
-          <div class="phone-activity">
-            <div class="phone-activity__header">
-              <span class="phone-activity__title">Aktivitäten</span>
-              <span class="phone-activity__more">Mehr</span>
-            </div>
-            <div class="phone-activity__card">
-              <div class="phone-activity__row">
-                <span class="phone-activity__emoji">👟</span>
-                <div class="phone-activity__info">
-                  <strong>Schritte</strong>
-                  <span>8 432 / 10 000</span>
-                </div>
-                <div class="phone-activity__ring-mini">
-                  <svg viewBox="0 0 36 36" width="32" height="32">
-                    <circle cx="18" cy="18" r="15" fill="none" stroke="#1E293B" stroke-width="3"/>
-                    <circle cx="18" cy="18" r="15" fill="none" stroke="#AEEA00" stroke-width="3" stroke-linecap="round" stroke-dasharray="94" stroke-dashoffset="16" transform="rotate(-90 18 18)"/>
-                  </svg>
-                  <span>84%</span>
-                </div>
-              </div>
-            </div>
-            <div class="phone-activity__card">
-              <div class="phone-activity__row">
-                <span class="phone-activity__emoji">🔥</span>
-                <div class="phone-activity__info">
-                  <strong>Kalorien verbrannt</strong>
-                  <span>461 kcal</span>
-                </div>
-              </div>
-            </div>
-            <div class="phone-activity__card phone-activity__card--thermo">
-              <div class="phone-activity__row">
-                <span class="phone-activity__emoji">🍳</span>
-                <div class="phone-activity__info">
-                  <strong>ChefPilot</strong>
-                  <span>Lachs-Bowl bereit · 24 min</span>
-                </div>
-                <span class="phone-activity__badge-new">NEU</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Phone bottom nav -->
-          <div class="phone-bottom-nav">
-            <span class="phone-bnav active">🏠</span>
-            <span class="phone-bnav">📊</span>
-            <span class="phone-bnav phone-bnav--add">＋</span>
-            <span class="phone-bnav">🍽️</span>
-            <span class="phone-bnav">👤</span>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -999,7 +877,11 @@
       <h2 class="section__title">Wir sind für dich da</h2>
     </div>
     <div class="contact__grid">
-      <form id="contactForm" class="contact__form reveal">
+      <form id="contactForm" class="contact__form reveal" action="https://formsubmit.co/mbalde@kvz-schule.ch" method="POST">
+        <input type="hidden" name="_subject" value="Nutrimove Fit Kontakt" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://nutrimove-fit.github.io/#contact" />
         <div class="form-group"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Dein Name" required /></div>
         <div class="form-group"><label for="email">E-Mail</label><input id="email" name="email" type="email" placeholder="deine@email.ch" required /></div>
         <div class="form-group"><label for="message">Nachricht</label><textarea id="message" name="message" rows="5" placeholder="Wie können wir dir helfen?"></textarea></div>

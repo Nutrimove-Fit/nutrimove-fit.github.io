@@ -683,6 +683,36 @@
     elem.style.animation = 'fadeIn 0.5s ease-out';
   }
 
+  // ════════════════════════════════════════════════
+  //  CONTACT FORM (FormSubmit)
+  // ════════════════════════════════════════════════
+  const contactForm = document.getElementById('contactForm');
+  const formMsg = document.getElementById('formMsg');
+  if (contactForm && formMsg) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formMsg.textContent = 'Wird gesendet...';
+      const data = new FormData(contactForm);
+      data.append('_replyto', data.get('email') || '');
+      try {
+        const res = await fetch(contactForm.action, {
+          method: 'POST',
+          body: data,
+          headers: { Accept: 'application/json' },
+        });
+        if (res.ok) {
+          formMsg.textContent = 'Danke! Wir melden uns in Kürze.';
+          contactForm.reset();
+        } else {
+          throw new Error('Send failed');
+        }
+      } catch (err) {
+        formMsg.textContent = 'Senden fehlgeschlagen. Bitte per E-Mail an mbalde@kvz-schule.ch schreiben.';
+        formMsg.style.color = '#ef4444';
+      }
+    });
+  }
+
   // ══════════════════════════════════════════════════
   //  APP PERMISSIONS MODAL
   // ══════════════════════════════════════════════════
