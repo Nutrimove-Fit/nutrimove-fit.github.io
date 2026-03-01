@@ -1,0 +1,119 @@
+/* Phone Macro Progress Bars */
+.phone-macro-bar__fill {
+  background: var(--bar-color, #60A5FA);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.phone-macro--p .phone-macro-bar__fill {
+  --bar-color: #AEEA00;
+}
+
+.phone-macro--c .phone-macro-bar__fill {
+  --bar-color: #06B6D4;
+}
+
+.phone-macro--f .phone-macro-bar__fill {
+  --bar-color: #C084FC;
+}
+
+/* Wave Bar Pattern */
+.wave-bar {
+  height: 20px;
+  background: linear-gradient(90deg, #60A5FA 0%, transparent var(--pct, 85%));
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+
+/* Phone App Header Styles */
+.phone-app-header {
+  padding: 0.5rem;
+  text-align: center;
+  background: linear-gradient(to right, #121a2b, #17213a);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.phone-app-header.gradient-purple {
+  background: linear-gradient(135deg, #7C3AED, #A855F7);
+}
+
+.phone-app-title {
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Phone App Search Input */
+.phone-app-search {
+  width: 90%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #0b1220;
+  color: #F1F5F9;
+  font-size: 0.75rem;
+}
+
+/* Phone App Content */
+.phone-app-content {
+  padding: 1rem;
+  overflow-y: auto;
+  height: calc(100% - 80px);
+}
+
+/* Recipe Card */
+.recipe-card {
+  margin-bottom: 0.8rem;
+  padding: 0.8rem;
+  background: #17213a;
+  border-radius: 8px;
+  border-left: 3px solid transparent;
+}
+
+.recipe-card.featured {
+  border-left-color: #AEEA00;
+}
+
+.recipe-card__title {
+  font-weight: 600;
+  color: #F1F5F9;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.recipe-card__meta {
+  font-size: 0.7rem;
+  color: #94A3B8;
+  margin: 0.3rem 0;
+}
+
+/* Calculator Form Styles */
+.calculator-form input,
+.calculator-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.calculator-form input:focus,
+.calculator-form select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Result Display */
+.calculator-result {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0f9ff;
+  border-left: 4px solid #3b82f6;
+  border-radius: 4px;
+  font-weight: 600;
+  color: #1e40af;
+}
