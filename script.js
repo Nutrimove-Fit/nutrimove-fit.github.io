@@ -1,5 +1,5 @@
-/* ═══════════════════════════════════════════════════
-   NutriMove Fit — Ultra-Premium Interactions
+﻿/* ═══════════════════════════════════════════════════
+   Nutrimove Fit — Ultra-Premium Interactions
    Particles, 3D tilt, parallax, magnetic btns,
    morphing glows, typing fx, stagger reveals
    ═══════════════════════════════════════════════════ */
@@ -413,8 +413,24 @@
   );
 
   // ══════════════════════════════════════════════════
-  //  14 · SMOOTH SCROLL
+  //  14 · SMOOTH SCROLL (with legal tab support)
   // ══════════════════════════════════════════════════
+  const legalPanelIds = ['agb', 'datenschutz', 'impressum'];
+
+  function activateLegalTab(panelId) {
+    const legalTabsAll = document.querySelectorAll('.legal__tab');
+    const legalPanelsAll = document.querySelectorAll('.legal__panel');
+    legalTabsAll.forEach((t) => t.classList.remove('active'));
+    legalPanelsAll.forEach((p) => p.classList.remove('active'));
+    const tab = document.querySelector(`.legal__tab[data-legal="${panelId}"]`);
+    const panel = document.getElementById(panelId);
+    if (tab) tab.classList.add('active');
+    if (panel) {
+      panel.classList.add('active');
+      panel.style.animation = 'fadeSlideUp .4s ease forwards';
+    }
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach((a) =>
     a.addEventListener('click', (e) => {
       const id = a.getAttribute('href');
@@ -423,6 +439,22 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
         return;
       }
+      const rawId = id.substring(1);
+
+      // If clicking a legal panel link (#agb, #datenschutz, #impressum),
+      // activate the correct tab and scroll to the legal section
+      if (legalPanelIds.includes(rawId)) {
+        e.preventDefault();
+        activateLegalTab(rawId);
+        const legalSection = document.getElementById('legal');
+        if (legalSection) {
+          const offset = header.offsetHeight + 20;
+          const top = legalSection.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+        return;
+      }
+
       const target = document.querySelector(id);
       if (target) {
         e.preventDefault();
@@ -434,21 +466,45 @@
   );
 
   // ══════════════════════════════════════════════════
-  //  15 · CONTACT FORM
+  //  15 · CONTACT FORM (sends to /api/contact)
   // ══════════════════════════════════════════════════
   const form = document.getElementById('contactForm');
   const formMsg = document.getElementById('formMsg');
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const name = form.elements.name.value.trim();
       const email = form.elements.email.value.trim();
+      const message = form.elements.message.value.trim();
       if (!name || !email) {
         showFormMsg('Bitte fülle Name und E-Mail aus.', 'error');
         return;
       }
-      showFormMsg('Danke, ' + name + '! Wir melden uns bald bei dir.', 'success');
-      form.reset();
+      if (!message || message.length < 5) {
+        showFormMsg('Bitte schreibe eine Nachricht (min. 5 Zeichen).', 'error');
+        return;
+      }
+      // Disable button while sending
+      const btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; btn.textContent = 'Wird gesendet...'; }
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message })
+        });
+        const data = await res.json();
+        if (res.ok) {
+          showFormMsg('Danke, ' + name + '! ' + (data.message || 'Wir melden uns bald bei dir.'), 'success');
+          form.reset();
+        } else {
+          showFormMsg(data.message || 'Fehler beim Senden. Bitte versuche es später.', 'error');
+        }
+      } catch (err) {
+        showFormMsg('Verbindungsfehler. Bitte versuche es später.', 'error');
+      } finally {
+        if (btn) { btn.disabled = false; btn.textContent = 'Nachricht senden'; }
+      }
     });
   }
   function showFormMsg(text, type) {
@@ -549,4 +605,212 @@
     obs.observe(num);
   });
 
+  // ══════════════════════════════════════════════════
+  //  CALCULATORS
+  // ══════════════════════════════════════════════════
+  document.querySelectorAll('.calc-btn').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const calcType = this.dataset.calc;
+      if (calcType === 'bmi') calcBMI();
+      else if (calcType === 'calorie') calcCalories();
+      else if (calcType === 'ideal') calcIdealWeight();
+      else if (calcType === 'burn') calcBurn();
+    });
+  });
+
+  function calcBMI() {
+    const height = parseFloat(document.querySelector('.bmi-height').value);
+    const weight = parseFloat(document.querySelector('.bmi-weight').value);
+    if (!height || !weight) { alert('Bitte alle Felder ausfüllen'); return; }
+    const bmi = (weight / ((height / 100) ** 2)).toFixed(1);
+    let category = '';
+    if (bmi < 18.5) category = 'Untergewicht';
+    else if (bmi < 25) category = 'Normalgewicht';
+    else if (bmi < 30) category = 'Übergewicht';
+    else category = 'Adipositas';
+    showResult('bmi-result', bmi, category);
+  }
+
+  function calcCalories() {
+    const age = parseFloat(document.querySelector('.cal-age').value);
+    const weight = parseFloat(document.querySelector('.cal-weight').value);
+    const height = parseFloat(document.querySelector('.cal-height').value);
+    const gender = document.querySelector('.cal-gender').value;
+    const activity = parseFloat(document.querySelector('.cal-activity').value);
+    if (!age || !weight || !height) { alert('Bitte alle Felder ausfüllen'); return; }
+
+    // Harris-Benedict formula
+    let bmr;
+    if (gender === 'male') {
+      bmr = 88.362 + (13.397 * weight) + (4.799 * height) - (5.677 * age);
+    } else {
+      bmr = 447.593 + (9.247 * weight) + (3.098 * height) - (4.330 * age);
+    }
+    const tdee = Math.round(bmr * activity);
+    let recommendation = `Für Gewichtsverlust: ~${Math.round(tdee - 500)} kcal/Tag`;
+    showResult('cal-result', tdee, recommendation);
+  }
+
+  function calcIdealWeight() {
+    const height = parseFloat(document.querySelector('.ideal-height').value);
+    const gender = document.querySelector('.ideal-gender').value;
+    if (!height) { alert('Bitte Größe eingeben'); return; }
+    const ideal = (height - 100 - (gender === 'male' ? 10 : 5) * 0.01 * (height - 150)).toFixed(0);
+    const range = `BMI 22: ${ideal} kg · Range: ${Math.round(ideal * 0.9)}–${Math.round(ideal * 1.1)} kg`;
+    showResult('ideal-result', ideal, range);
+  }
+
+  function calcBurn() {
+    const sport = document.querySelector('.burn-sport').value;
+    const duration = parseFloat(document.querySelector('.burn-duration').value);
+    const weight = parseFloat(document.querySelector('.burn-weight').value);
+    if (!sport || sport === '— Wähle eine Sportart —' || !duration || !weight)
+      { alert('Bitte alle Felder ausfüllen'); return; }
+
+    const mets = { walking: 3.5, jogging: 8, running: 12, cycling: 9.8, swimming: 8, gym: 6, yoga: 2.5, hiit: 10 };
+    const met = mets[sport] || 6;
+    const burned = Math.round((met * weight * duration) / 60);
+    showResult('burn-result', burned, '');
+  }
+
+  function showResult(elementId, num, category) {
+    const elem = document.getElementById(elementId);
+    elem.querySelector('.result-num').textContent = num.toLocaleString('de-CH');
+    if (elem.querySelector('.result-category')) {
+      elem.querySelector('.result-category').textContent = category;
+    }
+    elem.style.display = 'block';
+    elem.style.animation = 'fadeIn 0.5s ease-out';
+  }
+
+  // ══════════════════════════════════════════════════
+  //  APP PERMISSIONS MODAL
+  // ══════════════════════════════════════════════════
+  window.closePermissions = function() {
+    const modal = document.getElementById('permissionsModal');
+    if (modal) modal.style.display = 'none';
+    localStorage.setItem('permissionsShown', 'true');
+  };
+
+  window.savePermissions = function() {
+    const perms = {
+      health: document.getElementById('perm-health')?.checked,
+      photos: document.getElementById('perm-photos')?.checked,
+      location: document.getElementById('perm-location')?.checked,
+      camera: document.getElementById('perm-camera')?.checked,
+      contacts: document.getElementById('perm-contacts')?.checked,
+      calendar: document.getElementById('perm-calendar')?.checked
+    };
+    localStorage.setItem('appPermissions', JSON.stringify(perms));
+    closePermissions();
+  };
+
+  // Show permissions modal on first visit
+  if (!localStorage.getItem('permissionsShown')) {
+    setTimeout(() => {
+      const modal = document.getElementById('permissionsModal');
+      if (modal) modal.style.display = 'flex';
+    }, 2000);
+  }
+
+  // ══════════════════════════════════════════════════
+  //  PHONES CAROUSEL (3-PHONE SHOWCASE)
+  // ══════════════════════════════════════════════════
+  const phonesTrack = document.getElementById('phonesTrack');
+  const phoneDots = document.querySelectorAll('.dot');
+  
+  let currentSlide = 0;
+  let isDragging = false;
+  let startX = 0;
+  let offsetX = 0;
+  
+  function updatePhoneSlide(slideIndex) {
+    currentSlide = slideIndex;
+    const offset = -currentSlide * 100;
+    phonesTrack.style.transform = `translateX(${offset}%)`;
+    
+    // Update dots
+    phoneDots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === currentSlide);
+    });
+  }
+  
+  // Dot click nav
+  phoneDots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => {
+      updatePhoneSlide(idx);
+    });
+  });
+
+  // Handle initial URL hash for legal tabs
+  const initialHash = window.location.hash.substring(1);
+  if (legalPanelIds.includes(initialHash)) {
+    activateLegalTab(initialHash);
+    setTimeout(() => {
+      const legalSection = document.getElementById('legal');
+      if (legalSection) {
+        const offset = header.offsetHeight + 20;
+        const top = legalSection.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    }, 500);
+  }
+  
+  // Touch swipe
+  phonesTrack.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    startX = e.touches[0].clientX;
+    phonesTrack.classList.add('dragging');
+  });
+  
+  phonesTrack.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    offsetX = e.touches[0].clientX - startX;
+  });
+  
+  phonesTrack.addEventListener('touchend', () => {
+    isDragging = false;
+    phonesTrack.classList.remove('dragging');
+    
+    const threshold = 50; // Min swipe distance
+    if (Math.abs(offsetX) > threshold) {
+      if (offsetX > 0 && currentSlide > 0) {
+        currentSlide--;
+      } else if (offsetX < 0 && currentSlide < 2) {
+        currentSlide++;
+      }
+    }
+    updatePhoneSlide(currentSlide);
+  });
+  
+  // Keyboard nav
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft' && currentSlide > 0) {
+      updatePhoneSlide(currentSlide - 1);
+    } else if (e.key === 'ArrowRight' && currentSlide < 2) {
+      updatePhoneSlide(currentSlide + 1);
+    }
+  });
+
+  // ══════════════════════════════════════════════════
+  //  COOKIE CONSENT (DSGVO)
+  // ══════════════════════════════════════════════════
+  const cookieBanner = document.getElementById('cookieConsent');
+  if (cookieBanner && !localStorage.getItem('cookieConsent')) {
+    setTimeout(() => { cookieBanner.style.display = 'block'; }, 1000);
+  }
+
+  window.acceptCookies = function () {
+    localStorage.setItem('cookieConsent', 'accepted');
+    localStorage.setItem('cookieConsentDate', new Date().toISOString());
+    if (cookieBanner) cookieBanner.style.display = 'none';
+  };
+
+  window.declineCookies = function () {
+    localStorage.setItem('cookieConsent', 'essential-only');
+    localStorage.setItem('cookieConsentDate', new Date().toISOString());
+    if (cookieBanner) cookieBanner.style.display = 'none';
+  };
+
 })();
+

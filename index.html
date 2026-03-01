@@ -1,14 +1,22 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>NutriMove Fit — Ernährung · Training · Tracking</title>
-  <meta name="description" content="NutriMove Fit: Deine All-in-One App für Ernährung, Training und Gesundheit. 50.000+ Rezepte, KI-Empfehlungen, Coaching-Pläne. Jetzt kostenlos starten!" />
+  <!-- iOS / Mobile Meta -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Nutrimove Fit" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#050816" />
+  <title>Nutrimove Fit — Ernährung · Training · Tracking</title>
+  <meta name="description" content="Nutrimove Fit: Deine All-in-One App für Ernährung, Training und Gesundheit. 5000+ Rezepte, KI-Empfehlungen, Coaching-Pläne, BMI-Rechner, Kalorienbedarf. Jetzt kostenlos starten!" />
+  <link rel="apple-touch-icon" href="nutrimove_logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
 
@@ -16,8 +24,8 @@
 <header class="header" id="top">
   <div class="container header__inner">
     <a href="#top" class="header__logo">
-      <img src="nutrimove_logo.png" alt="NutriMove Fit" class="header__logo-img" />
-      <span class="header__logo-text">NutriMove <span class="accent">Fit</span></span>
+      <img src="nutrimove_logo.png" alt="Nutrimove Fit" class="header__logo-img" />
+      <span class="header__logo-text">Nutrimove <span class="accent">Fit</span></span>
     </a>
     <nav class="header__nav" id="mainNav">
       <a href="#features">Features</a>
@@ -46,7 +54,7 @@
         Neu: Athlete Pro &amp; Club-Pläne verfügbar
       </span>
       <h1 class="hero__title">Gewohnheiten,<br>die dein Leben&nbsp;verändern.</h1>
-      <p class="hero__sub">NutriMove Fit vereint Meal-Tracking, 50&thinsp;000+ Rezepte, Coaching-Pläne und Leistungsanalysen in einer App — für Einzelpersonen, Athleten und Vereine.</p>
+      <p class="hero__sub">Nutrimove Fit vereint Meal-Tracking, 5000+ Rezepte, Coaching-Pläne und Leistungsanalysen in einer App — für Einzelpersonen, Athleten und Vereine.</p>
       <div class="hero__actions">
         <a href="#pricing" class="btn btn--primary btn--lg">Kostenlos starten</a>
         <a href="#features" class="btn btn--ghost btn--lg">Features entdecken</a>
@@ -79,8 +87,8 @@
 
           <!-- App header -->
           <div class="phone-app-header">
-            <img src="nutrimove_logo.png" alt="NutriMove" class="hero__phone-logo" />
-            <span class="phone-app-title">NutriMove <strong>Fit</strong></span>
+            <img src="nutrimove_logo.png" alt="Nutrimove" class="hero__phone-logo" />
+            <span class="phone-app-title">Nutrimove <strong>Fit</strong></span>
           </div>
 
           <!-- Calorie Ring -->
@@ -193,7 +201,7 @@
 <section class="stats">
   <div class="container stats__inner">
     <div class="stat reveal">
-      <span class="stat__num" data-target="50000">0</span><span class="stat__plus">+</span>
+      <span class="stat__num" data-target="5000">0</span>
       <span class="stat__label">Rezepte</span>
     </div>
     <div class="stat reveal">
@@ -217,7 +225,7 @@
     <div class="section__head reveal">
       <span class="section__eyebrow">Alles in einer App</span>
       <h2 class="section__title">Dein All-in-One-Tracker für<br>Ernährung, Fitness &amp; Gesundheit</h2>
-      <p class="section__sub">Ob Abnehmen, Muskelaufbau oder eine ausgewogene Ernährung — NutriMove Fit unterstützt dich mit intelligenten Tools.</p>
+      <p class="section__sub">Ob Abnehmen, Muskelaufbau oder eine ausgewogene Ernährung — Nutrimove Fit unterstützt dich mit intelligenten Tools.</p>
     </div>
     <div class="features__grid">
       <article class="feature-card reveal">
@@ -231,7 +239,7 @@
         <div class="feature-card__icon feature-card__icon--violet">
           <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
         </div>
-        <h3>50&thinsp;000+ Rezepte</h3>
+        <h3>5'000+ Rezepte</h3>
         <p>Personalisierte Vorschläge, automatische Einkaufsliste und detaillierte Nährwert-Tabellen — passend zu deinen Zielen und Allergien.</p>
       </article>
       <article class="feature-card reveal">
@@ -295,7 +303,360 @@
   </div>
 </section>
 
-<!-- ══════════ PRICING ══════════ -->
+<!-- ══════════ APP SHOWCASE (3 PHONES CAROUSEL) ══════════ -->
+<section id="showcase" class="showcase section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">App in Aktion</span>
+      <h2 class="section__title">Erlebe Nutrimove Fit live</h2>
+      <p class="section__sub">Dashboard, Rezepte und Analytics — alles auf einen Blick.</p>
+    </div>
+
+    <div class="phones-carousel">
+      <div class="phones-track" id="phonesTrack">
+        <!-- Phone 1: Dashboard -->
+        <div class="phone-slide">
+          <div class="hero__phone">
+            <div class="hero__phone-screen">
+              <div class="phone-statusbar">
+                <span>9:41</span>
+                <div class="phone-statusbar__icons">
+                  <span class="phone-signal">●●●●○</span>
+                  <span class="phone-wifi">⚡</span>
+                  <span class="phone-battery">87%</span>
+                </div>
+              </div>
+              <div class="phone-app-header">
+                <img src="nutrimove_logo.png" alt="Nutrimove" class="hero__phone-logo" />
+                <span class="phone-app-title">Nutrimove <strong>Fit</strong></span>
+              </div>
+              <div class="phone-ring-section">
+                <svg class="phone-ring" viewBox="0 0 120 120" width="110" height="110">
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="#1E293B" stroke-width="8"/>
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="url(#ringGrad)" stroke-width="8" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="92" class="phone-ring__progress"/>
+                  <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#AEEA00"/><stop offset="100%" stop-color="#76FF03"/></linearGradient></defs>
+                </svg>
+                <div class="phone-ring-text">
+                  <span class="phone-ring-val">1 847</span>
+                  <span class="phone-ring-lbl">kcal</span>
+                </div>
+              </div>
+              <div class="phone-macro-row">
+                <div class="phone-macro phone-macro--p"><div class="phone-macro-bar"><div class="phone-macro-bar__fill" style="width:78%"></div></div><span class="phone-macro__val">124g</span><span class="phone-macro__lbl">Protein</span></div>
+                <div class="phone-macro phone-macro--c"><div class="phone-macro-bar"><div class="phone-macro-bar__fill" style="width:64%"></div></div><span class="phone-macro__val">198g</span><span class="phone-macro__lbl">Carbs</span></div>
+                <div class="phone-macro phone-macro--f"><div class="phone-macro-bar"><div class="phone-macro-bar__fill" style="width:52%"></div></div><span class="phone-macro__val">61g</span><span class="phone-macro__lbl">Fett</span></div>
+              </div>
+              <div class="phone-bottom-nav">
+                <span class="phone-bnav active">🏠</span>
+                <span class="phone-bnav">📊</span>
+                <span class="phone-bnav phone-bnav--add">＋</span>
+                <span class="phone-bnav">🍽️</span>
+                <span class="phone-bnav">👤</span>
+              </div>
+            </div>
+          </div>
+          <div class="phone-label">Dashboard</div>
+        </div>
+
+        <!-- Phone 2: Recipes -->
+        <div class="phone-slide">
+          <div class="hero__phone">
+            <div class="hero__phone-screen">
+              <div class="phone-statusbar">
+                <span>9:41</span>
+                <div class="phone-statusbar__icons">
+                  <span class="phone-signal">●●●●○</span>
+                  <span class="phone-wifi">⚡</span>
+                  <span class="phone-battery">87%</span>
+                </div>
+              </div>
+              <div class="phone-app-header" style="padding:0.5rem;text-align:center;background:linear-gradient(to right,#121a2b,#17213a);">
+                <input type="text" placeholder="🔍 Rezepte durchsuchen..." style="width:90%;padding:0.5rem;border:none;border-radius:8px;background:#0b1220;color:#F1F5F9;font-size:0.75rem;" />
+              </div>
+              <div style="padding:1rem;overflow-y:auto;height:calc(100% - 80px);">
+                <div style="margin-bottom:0.8rem;padding:0.8rem;background:#17213a;border-radius:8px;border-left:3px solid#AEEA00;">
+                  <div style="font-weight:600;color:#F1F5F9;font-size:0.85rem;">Lachs-Buddha-Bowl</div>
+                  <div style="font-size:0.7rem;color:#94A3B8;margin:0.3rem 0;">🥗 350 kcal · 28g Protein</div>
+                </div>
+                <div style="margin-bottom:0.8rem;padding:0.8rem;background:#17213a;border-radius:8px;">
+                  <div style="font-weight:600;color:#F1F5F9;font-size:0.85rem;">Grüner Smoothie</div>
+                  <div style="font-size:0.7rem;color:#94A3B8;margin:0.3rem 0;">🥤 180 kcal · 8g Protein</div>
+                </div>
+                <div style="margin-bottom:0.8rem;padding:0.8rem;background:#17213a;border-radius:8px;">
+                  <div style="font-weight:600;color:#F1F5F9;font-size:0.85rem;">Quinoa & Gemüse</div>
+                  <div style="font-size:0.7rem;color:#94A3B8;margin:0.3rem 0;">🥘 420 kcal · 15g Protein</div>
+                </div>
+              </div>
+              <div class="phone-bottom-nav">
+                <span class="phone-bnav">🏠</span>
+                <span class="phone-bnav">📊</span>
+                <span class="phone-bnav phone-bnav--add">＋</span>
+                <span class="phone-bnav active">🍽️</span>
+                <span class="phone-bnav">👤</span>
+              </div>
+            </div>
+          </div>
+          <div class="phone-label">5000+ Rezepte</div>
+        </div>
+
+        <!-- Phone 3: Analytics -->
+        <div class="phone-slide">
+          <div class="hero__phone">
+            <div class="hero__phone-screen">
+              <div class="phone-statusbar">
+                <span>9:41</span>
+                <div class="phone-statusbar__icons">
+                  <span class="phone-signal">●●●●○</span>
+                  <span class="phone-wifi">⚡</span>
+                  <span class="phone-battery">87%</span>
+                </div>
+              </div>
+              <div class="phone-app-header" style="background:linear-gradient(135deg,#7C3AED,#A855F7);">
+                <span class="phone-app-title" style="color:white;">Fortschritt</span>
+              </div>
+              <div style="padding:1rem;overflow-y:auto;height:calc(100% - 80px);">
+                <div style="text-align:center;margin-bottom:1.5rem;padding:1rem;background:#17213a;border-radius:8px;">
+                  <div style="font-size:2rem;font-weight:800;color:#AEEA00;">-4,2kg</div>
+                  <div style="font-size:0.8rem;color:#94A3B8;">Diese Woche</div>
+                </div>
+                <div style="margin-bottom:0.8rem;">
+                  <div style="font-size:0.8rem;color:#94A3B8;margin-bottom:0.3rem;">Kalorien (Woche)</div>
+                  <div style="height:80px;background:url('data:image/svg+xml,...');background-size:contain;background-repeat:no-repeat;"></div>
+                </div>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:1rem;">
+                  <div style="text-align:center;padding:0.8rem;background:#17213a;border-radius:8px;">
+                    <div style="font-size:0.7rem;color:#94A3B8;">Trainings</div>
+                    <div style="font-size:1.2rem;color:#AEEA00;font-weight:700;margin-top:0.3rem;">12</div>
+                  </div>
+                  <div style="text-align:center;padding:0.8rem;background:#17213a;border-radius:8px;">
+                    <div style="font-size:0.7rem;color:#94A3B8;">Avg. Schritt</div>
+                    <div style="font-size:1.2rem;color:#06B6D4;font-weight:700;margin-top:0.3rem;">9.2k</div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-bottom-nav">
+                <span class="phone-bnav">🏠</span>
+                <span class="phone-bnav active">📊</span>
+                <span class="phone-bnav phone-bnav--add">＋</span>
+                <span class="phone-bnav">🍽️</span>
+                <span class="phone-bnav">👤</span>
+              </div>
+            </div>
+          </div>
+          <div class="phone-label">Analytics & Reports</div>
+        </div>
+      </div>
+
+      <!-- Navigation Dots -->
+      <div class="phones-dots">
+        <button class="dot active" data-slide="0"></button>
+        <button class="dot" data-slide="1"></button>
+        <button class="dot" data-slide="2"></button>
+      </div>
+
+      <!-- Swipe Indicator -->
+      <div class="swipe-hint">↔️ Swipe zum Scrollen</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="tools" class="tools section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Deine persönlichen Werte</span>
+      <h2 class="section__title">BMI-Rechner · Kalorienbedarf · Idealgewicht</h2>
+      <p class="section__sub">Berechne deine persönlichen Gesundheitskennzahlen — kostenlos, blitzschnell und ohne Registrierung.</p>
+    </div>
+
+    <div class="tools__grid">
+      <!-- BMI CALCULATOR -->
+      <div class="tool-card reveal">
+        <h3 class="tool-card__title">🏋️ BMI-Rechner</h3>
+        <div class="tool-card__form">
+          <div class="tool-input-group">
+            <label>Körpergröße (cm):</label>
+            <input type="number" class="bmi-height" min="100" max="250" placeholder="z.B. 175" />
+          </div>
+          <div class="tool-input-group">
+            <label>Körpergewicht (kg):</label>
+            <input type="number" class="bmi-weight" min="30" max="300" placeholder="z.B. 75" />
+          </div>
+          <button class="btn btn--sm btn--primary calc-btn" data-calc="bmi">Berechnen</button>
+        </div>
+        <div class="tool-result" id="bmi-result" style="display:none;">
+          <div class="result-value"><span class="result-num">—</span></div>
+          <div class="result-label">Dein BMI</div>
+          <div class="result-category">—</div>
+          <div class="result-info" style="font-size:.85rem;margin-top:0.75rem;">
+            <strong>Kategorien:</strong><br/>
+            < 18,5: Untergewicht<br/>
+            18,5–24,9: Normalgewicht<br/>
+            25–29,9: Übergewicht<br/>
+            ≥ 30: Adipositas
+          </div>
+        </div>
+      </div>
+
+      <!-- CALORIE NEEDS -->
+      <div class="tool-card reveal">
+        <h3 class="tool-card__title">🔥 Kaloriebedarf</h3>
+        <div class="tool-card__form">
+          <div class="tool-input-group">
+            <label>Alter (Jahre):</label>
+            <input type="number" class="cal-age" min="10" max="100" placeholder="z.B. 30" />
+          </div>
+          <div class="tool-input-group">
+            <label>Gewicht (kg):</label>
+            <input type="number" class="cal-weight" min="30" max="300" placeholder="z.B. 75" />
+          </div>
+          <div class="tool-input-group">
+            <label>Größe (cm):</label>
+            <input type="number" class="cal-height" min="100" max="250" placeholder="z.B. 175" />
+          </div>
+          <div class="tool-input-group">
+            <label>Geschlecht:</label>
+            <select class="cal-gender">
+              <option value="male">Männlich</option>
+              <option value="female">Weiblich</option>
+            </select>
+          </div>
+          <div class="tool-input-group">
+            <label>Aktivitätslevel:</label>
+            <select class="cal-activity">
+              <option value="1.2">Sitzend (wenig Bewegung)</option>
+              <option value="1.375">Leicht aktiv (1–3x/Woche)</option>
+              <option value="1.55">Moderat aktiv (3–5x/Woche)</option>
+              <option value="1.725">Sehr aktiv (6–7x/Woche)</option>
+              <option value="1.9">Extrem aktiv (Sport täglich)</option>
+            </select>
+          </div>
+          <button class="btn btn--sm btn--primary calc-btn" data-calc="calorie">Berechnen</button>
+        </div>
+        <div class="tool-result" id="cal-result" style="display:none;">
+          <div class="result-value"><span class="result-num">—</span> kcal/Tag</div>
+          <div class="result-label">Dein Kaloriebedarf</div>
+          <div class="result-category">—</div>
+        </div>
+      </div>
+
+      <!-- IDEAL WEIGHT -->
+      <div class="tool-card reveal">
+        <h3 class="tool-card__title">⚖️ Idealgewicht</h3>
+        <div class="tool-card__form">
+          <div class="tool-input-group">
+            <label>Körpergröße (cm):</label>
+            <input type="number" class="ideal-height" min="100" max="250" placeholder="z.B. 175" />
+          </div>
+          <div class="tool-input-group">
+            <label>Geschlecht:</label>
+            <select class="ideal-gender">
+              <option value="male">Männlich</option>
+              <option value="female">Weiblich</option>
+            </select>
+          </div>
+          <button class="btn btn--sm btn--primary calc-btn" data-calc="ideal">Berechnen</button>
+        </div>
+        <div class="tool-result" id="ideal-result" style="display:none;">
+          <div class="result-value"><span class="result-num">—</span> kg</div>
+          <div class="result-label">Idealgewicht (BMI 22)</div>
+          <div class="result-category">—</div>
+          <div class="result-info" style="font-size:.85rem;margin-top:0.75rem;">
+            Basiert auf<br/>BMI 22 (Mitte Normalbereich)
+          </div>
+        </div>
+      </div>
+
+      <!-- CALORIE BURN -->
+      <div class="tool-card reveal">
+        <h3 class="tool-card__title">💪 Kalorienverbrauch</h3>
+        <div class="tool-card__form">
+          <div class="tool-input-group">
+            <label>Sportart:</label>
+            <select class="burn-sport">
+              <option>— Wähle eine Sportart —</option>
+              <option value="walking">Spazieren (5 km/h)</option>
+              <option value="jogging">Joggen (8 km/h)</option>
+              <option value="running">Laufen (12 km/h)</option>
+              <option value="cycling">Radfahren (20 km/h)</option>
+              <option value="swimming">Schwimmen</option>
+              <option value="gym">Fitnessstudio (gemischt)</option>
+              <option value="yoga">Yoga</option>
+              <option value="hiit">HIIT / High-Intensity</option>
+            </select>
+          </div>
+          <div class="tool-input-group">
+            <label>Dauer (Minuten):</label>
+            <input type="number" class="burn-duration" min="5" max="480" placeholder="z.B. 30" />
+          </div>
+          <div class="tool-input-group">
+            <label>Gewicht (kg):</label>
+            <input type="number" class="burn-weight" min="30" max="300" placeholder="z.B. 75" />
+          </div>
+          <button class="btn btn--sm btn--primary calc-btn" data-calc="burn">Berechnen</button>
+        </div>
+        <div class="tool-result" id="burn-result" style="display:none;">
+          <div class="result-value"><span class="result-num">—</span> kcal</div>
+          <div class="result-label">Kalorienverbrauch</div>
+          <div class="result-category">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ NUTRITION REFERENCE TABLE ══════════ -->
+<section id="table" class="table-section section">
+  <div class="container">
+    <div class="section__head reveal">
+      <span class="section__eyebrow">Für dein Wissen</span>
+      <h2 class="section__title">Kalorientabelle — Häufige Lebensmittel</h2>
+      <p class="section__sub">Blitzschnelle Referenz für Kalorien, Proteine, Kohlenhydrate und Fett.</p>
+    </div>
+    <div class="table-wrapper reveal">
+      <table class="nutrition-table">
+        <thead>
+          <tr>
+            <th>Lebensmittel (100g)</th>
+            <th>Kalorien</th>
+            <th>Protein</th>
+            <th>Kohlenhydrate</th>
+            <th>Fett</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Hühnerbrust</strong> (gekocht)</td><td>165 kcal</td><td>31g</td><td>0g</td><td>3,6g</td></tr>
+          <tr><td><strong>Lachs</strong> (roh)</td><td>208 kcal</td><td>20g</td><td>0g</td><td>13g</td></tr>
+          <tr><td><strong>Eier</strong> (1 Stück, 50g)</td><td>78 kcal</td><td>6,3g</td><td>0,6g</td><td>5,3g</td></tr>
+          <tr><td><strong>Griechischer Joghurt</strong></td><td>59 kcal</td><td>10g</td><td>3,3g</td><td>0,4g</td></tr>
+          <tr><td><strong>Rindfleisch</strong> (mageres Steak)</td><td>250 kcal</td><td>26g</td><td>0g</td><td>15g</td></tr>
+          <tr style="background:#0f1618;"><td colspan="5"><strong>Kohlenhydrate &amp; Getreide</strong></td></tr>
+          <tr><td><strong>Reis</strong> (gekocht, weiß)</td><td>130 kcal</td><td>2,7g</td><td>28g</td><td>0,3g</td></tr>
+          <tr><td><strong>Haferflocken</strong> (trocken)</td><td>389 kcal</td><td>17g</td><td>66g</td><td>7g</td></tr>
+          <tr><td><strong>Pasta</strong> (gekocht)</td><td>131 kcal</td><td>4,4g</td><td>25g</td><td>1,1g</td></tr>
+          <tr><td><strong>Vollkornbrot</strong></td><td>247 kcal</td><td>9g</td><td>41g</td><td>3,3g</td></tr>
+          <tr><td><strong>Kartoffel</strong> (gekocht)</td><td>77 kcal</td><td>2g</td><td>17g</td><td>0,1g</td></tr>
+          <tr style="background:#0f1618;"><td colspan="5"><strong>Obst &amp; Gemüse</strong></td></tr>
+          <tr><td><strong>Banane</strong> (1 Stück, 120g)</td><td>107 kcal</td><td>1,3g</td><td>27g</td><td>0,3g</td></tr>
+          <tr><td><strong>Apfel</strong></td><td>52 kcal</td><td>0,3g</td><td>14g</td><td>0,2g</td></tr>
+          <tr><td><strong>Brokkoli</strong></td><td>34 kcal</td><td>2,8g</td><td>7g</td><td>0,4g</td></tr>
+          <tr><td><strong>Spinat</strong> (roh)</td><td>23 kcal</td><td>2,9g</td><td>3,6g</td><td>0,4g</td></tr>
+          <tr><td><strong>Karotte</strong></td><td>41 kcal</td><td>0,9g</td><td>10g</td><td>0,2g</td></tr>
+          <tr style="background:#0f1618;"><td colspan="5"><strong>Nüsse &amp; Seeds</strong></td></tr>
+          <tr><td><strong>Mandeln</strong></td><td>579 kcal</td><td>21g</td><td>22g</td><td>50g</td></tr>
+          <tr><td><strong>Peanut Butter</strong></td><td>588 kcal</td><td>25g</td><td>20g</td><td>50g</td></tr>
+          <tr><td><strong>Chiasamen</strong></td><td>486 kcal</td><td>17g</td><td>42g</td><td>31g</td></tr>
+          <tr style="background:#0f1618;"><td colspan="5"><strong>Getränke &amp; Sonstiges</strong></td></tr>
+          <tr><td><strong>Milch</strong> (Vollmilch, 100ml)</td><td>64 kcal</td><td>3,3g</td><td>4,8g</td><td>3,6g</td></tr>
+          <tr><td><strong>Honig</strong> (1 EL, 20g)</td><td>64 kcal</td><td>0,1g</td><td>17g</td><td>0g</td></tr>
+          <tr><td><strong>Olivenöl</strong> (1 EL, 15ml)</td><td>119 kcal</td><td>0g</td><td>0g</td><td>14g</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+
 <section id="pricing" class="pricing section">
   <div class="container">
     <div class="section__head reveal">
@@ -334,13 +695,13 @@
           </div>
           <ul class="price-card__features">
             <li>Unbegrenztes Meal-Logging</li>
-            <li>50&thinsp;000+ Rezepte</li>
+            <li>5'000+ Rezepte</li>
             <li>Advanced Analytics</li>
             <li>KI-Empfehlungen</li>
             <li>Daten-Export (PDF/CSV)</li>
             <li>Community &amp; E-Mail-Support</li>
           </ul>
-          <a href="#contact" class="btn btn--outline btn--block">Plan wählen</a>
+          <a href="https://buy.stripe.com/4gMaEQ9Me44G6fPe1FfMA01" target="_blank" rel="noopener" class="btn btn--outline btn--block">Jetzt kaufen via Stripe</a>
         </div>
         <div class="price-card price-card--featured reveal">
           <span class="price-card__badge">Beliebt</span>
@@ -357,7 +718,13 @@
             <li>Ziel-Tracking</li>
             <li>Priority E-Mail-Support</li>
           </ul>
-          <a href="#contact" class="btn btn--primary btn--block">Jetzt abonnieren</a>
+          <div class="price-card__actions">
+            <div class="stripe-buy-embed">
+              <stripe-buy-button buy-button-id="buy_btn_1T6BG020x7LNKgb3xkSAjZ3w" publishable-key="pk_live_51T2TMr2Ox7LNKgb3qn4kvxxf7MFYNTI8yGXKDlxbahfRrFdEvLgJv8eQzVoy65HCc2H40MX6IkXWvj5hSIJsCbz00mJZRUgu8"></stripe-buy-button>
+            </div>
+            <a href="https://buy.stripe.com/aFa7sE4rUcBccEdaPtfMA00" target="_blank" rel="noopener" class="btn btn--ghost btn--block">Direktlink öffnen</a>
+            <p class="price-card__hint">Sichere Zahlung über Stripe · Sofortzugang nach Kauf</p>
+          </div>
         </div>
         <div class="price-card reveal">
           <div class="price-card__head">
@@ -374,7 +741,7 @@
             <li>24/7 Priority-Support</li>
             <li>Coach-Konsultation (In-App)</li>
           </ul>
-          <a href="#contact" class="btn btn--outline btn--block">Plan wählen</a>
+          <a href="https://buy.stripe.com/aFa3coaQi58K33Df5JfMA02" target="_blank" rel="noopener" class="btn btn--outline btn--block">Jetzt kaufen via Stripe</a>
         </div>
       </div>
     </div>
@@ -396,7 +763,7 @@
             <li>API-Zugang (limitiert)</li>
             <li>E-Mail-Support</li>
           </ul>
-          <a href="#contact" class="btn btn--outline btn--block">Anfragen</a>
+          <a href="https://buy.stripe.com/aFafZagaC30C5bLcXBfMA03" target="_blank" rel="noopener" class="btn btn--outline btn--block">Jetzt kaufen via Stripe</a>
         </div>
         <div class="price-card price-card--featured reveal">
           <span class="price-card__badge">Empfohlen</span>
@@ -415,7 +782,7 @@
             <li>Event-Management</li>
             <li>Voller API-Zugang</li>
           </ul>
-          <a href="#contact" class="btn btn--primary btn--block">Anfragen</a>
+          <a href="https://buy.stripe.com/fZuaEQ1fIat48nX4r5fMA04" target="_blank" rel="noopener" class="btn btn--primary btn--block">Jetzt kaufen via Stripe</a>
         </div>
         <div class="price-card reveal">
           <div class="price-card__head">
@@ -432,7 +799,7 @@
             <li>24/7 Telefon- &amp; E-Mail-Support</li>
             <li>Custom Feature Development</li>
           </ul>
-          <a href="#contact" class="btn btn--outline btn--block">Anfragen</a>
+          <a href="https://buy.stripe.com/cNi14g3nQcBceMl3n1fMA05" target="_blank" rel="noopener" class="btn btn--outline btn--block">Jetzt kaufen via Stripe</a>
         </div>
       </div>
     </div>
@@ -450,7 +817,7 @@
             <tr><td>Preis</td><td>CHF 0</td><td>CHF 16.50</td><td>CHF 29.90</td><td>CHF 45.–</td><td>CHF 249.–</td><td>CHF 449.–</td><td>CHF 749.–</td></tr>
             <tr><td>Laufzeit</td><td>—</td><td>6 Mt.</td><td>12 Mt.</td><td>12 Mt.</td><td>12 Mt.</td><td>12 Mt.</td><td>12 Mt.</td></tr>
             <tr><td>Meal-Logging</td><td>5/Tag</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td><td>∞</td></tr>
-            <tr><td>Rezepte</td><td>100</td><td>50 000+</td><td>50 000+</td><td>50 000+</td><td>50 000+</td><td>50 000+</td><td>50 000+</td></tr>
+            <tr><td>Rezepte</td><td>100</td><td>5'000+</td><td>5'000+</td><td>5'000+</td><td>5'000+</td><td>5'000+</td><td>5'000+</td></tr>
             <tr><td>Analytics</td><td>Basis</td><td>Advanced</td><td>Advanced</td><td>Advanced</td><td>Basis</td><td>Advanced</td><td>Premium</td></tr>
             <tr><td>Coaching</td><td>✗</td><td>✗</td><td>✓</td><td>✓</td><td>✗</td><td>✓</td><td>✓</td></tr>
             <tr><td>Athlete</td><td>✗</td><td>✗</td><td>✗</td><td>✓</td><td>✗</td><td>✗</td><td>✓</td></tr>
@@ -474,7 +841,7 @@
     <div class="testimonials__grid">
       <blockquote class="testimonial reveal">
         <div class="testimonial__stars">★★★★★</div>
-        <p>«NutriMove Fit hat mein Essverhalten komplett verändert. Die Rezeptvorschläge sind genial und das Tracking geht super schnell.»</p>
+        <p>«Nutrimove Fit hat mein Essverhalten komplett verändert. Die Rezeptvorschläge sind genial und das Tracking geht super schnell.»</p>
         <footer><strong>Lea M.</strong><span>Zürich · Member Jahresabo</span></footer>
       </blockquote>
       <blockquote class="testimonial reveal">
@@ -502,9 +869,9 @@
       <details class="faq__item reveal"><summary>Kann ich jederzeit kündigen?</summary><p>Ja. Du kannst dein Abo jederzeit in den Kontoeinstellungen deaktivieren. Die Kündigung wird zum Ende der aktuellen Laufzeit wirksam.</p></details>
       <details class="faq__item reveal"><summary>Wie bezahle ich?</summary><p>Zahlungen laufen sicher über <strong>Stripe</strong>. Wir speichern keine Kreditkartendaten — alles wird direkt von Stripe verschlüsselt verarbeitet.</p></details>
       <details class="faq__item reveal"><summary>Gibt es eine Testphase?</summary><p>Der Free-Plan bleibt dauerhaft kostenlos. Für Premium-Features kannst du jederzeit upgraden — keine versteckten Kosten, kein Vertragszwang.</p></details>
-      <details class="faq__item reveal"><summary>Ist die App medizinische Beratung?</summary><p>Nein. NutriMove Fit dient der allgemeinen Information und ersetzt keine ärztliche Beratung. Siehe unseren <a href="#impressum">Haftungshinweis</a>.</p></details>
+      <details class="faq__item reveal"><summary>Ist die App medizinische Beratung?</summary><p>Nein. Nutrimove Fit dient der allgemeinen Information und ersetzt keine ärztliche Beratung. Siehe unseren <a href="#impressum">Haftungshinweis</a>.</p></details>
       <details class="faq__item reveal"><summary>Was passiert mit meinen Daten?</summary><p>Alle Details findest du in unserer <a href="#datenschutz">Datenschutzerklärung</a>. Kurzfassung: Kein Tracking, keine Drittanbieter-Cookies, Daten jederzeit exportierbar und löschbar.</p></details>
-      <details class="faq__item reveal"><summary>In welchen Ländern ist NutriMove Fit verfügbar?</summary><p>NutriMove Fit ist weltweit verfügbar. Der Dienst wird in der Schweiz betrieben und unterliegt Schweizer Datenschutzrecht.</p></details>
+      <details class="faq__item reveal"><summary>In welchen Ländern ist Nutrimove Fit verfügbar?</summary><p>Nutrimove Fit ist weltweit verfügbar. Der Dienst wird in der Schweiz betrieben und unterliegt Schweizer Datenschutzrecht.</p></details>
     </div>
   </div>
 </section>
@@ -609,7 +976,7 @@
 <section class="cta-banner">
   <div class="container cta-banner__inner reveal">
     <h2>Bereit für Ergebnisse?<br>Starte noch heute mit deinem Plan.</h2>
-    <p>Erstelle dein kostenloses Konto und entdecke, wie NutriMove Fit dein Leben verändern kann.</p>
+    <p>Erstelle dein kostenloses Konto und entdecke, wie Nutrimove Fit dein Leben verändern kann.</p>
     <div class="cta-banner__buttons">
       <a href="#pricing" class="btn btn--primary btn--lg">Jetzt kostenlos starten</a>
     </div>
@@ -643,7 +1010,7 @@
       </form>
       <div class="contact__info reveal">
         <div class="contact__info-card">
-          <h3>NutriMove Fit</h3>
+          <h3>Nutrimove Fit</h3>
           <p>Mamadou Balde<br>Limmatstrasse 310<br>8005 Zürich, Schweiz</p>
         </div>
         <div class="contact__info-card">
@@ -673,8 +1040,8 @@
       <h2>Allgemeine Geschäftsbedingungen (AGB)</h2>
       <p class="legal__date">Gültig ab: 22. Februar 2026</p>
       <h3>1. Anbietende Partei und Geltungsbereich</h3>
-      <p><strong>Unternehmen:</strong> NutriMove Fit · <strong>Inhaber:</strong> Mamadou Balde · <strong>Adresse:</strong> Limmatstrasse 310, 8005 Zürich, Schweiz · <strong>E-Mail:</strong> mbalde@kvz-schule.ch</p>
-      <p>Diese AGB gelten für sämtliche Nutzerinnen und Nutzer, die den Dienst NutriMove Fit verwenden. Mit der Registrierung oder Nutzung des Dienstes erklären sich Kundinnen und Kunden mit diesen AGB einverstanden.</p>
+      <p><strong>Unternehmen:</strong> Nutrimove Fit · <strong>Inhaber:</strong> Mamadou Balde · <strong>Adresse:</strong> Limmatstrasse 310, 8005 Zürich, Schweiz · <strong>E-Mail:</strong> mbalde@kvz-schule.ch</p>
+      <p>Diese AGB gelten für sämtliche Nutzerinnen und Nutzer, die den Dienst Nutrimove Fit verwenden. Mit der Registrierung oder Nutzung des Dienstes erklären sich Kundinnen und Kunden mit diesen AGB einverstanden.</p>
       <h3>2. Leistungsbeschreibung</h3>
       <ul><li>Verwaltung von Benutzerkonten und Profildaten</li><li>Ernährungs- und Trainingsfunktionen (Planung, Protokollierung, Auswertungen)</li><li>Kommunikation zwischen Kundinnen/Kunden und Trainerinnen/Trainern</li><li>Upload-Funktionen (z.&nbsp;B. Technik- und Trainingsvideos)</li><li>Optional: KI-gestützte Assistenzfunktionen</li></ul>
       <p>Der Dienst stellt Informationen, Vorlagen und Werkzeuge bereit. <strong>Er ersetzt keine medizinische, therapeutische oder ernährungswissenschaftliche Beratung.</strong></p>
@@ -705,7 +1072,7 @@
       <h2>Datenschutzerklärung</h2>
       <p class="legal__date">Letzte Aktualisierung: 22. Februar 2026</p>
       <h3>1. Verantwortliche Stelle</h3>
-      <p><strong>NutriMove Fit</strong> · Mamadou Balde · Limmatstrasse 310, 8005 Zürich · mbalde@kvz-schule.ch</p>
+      <p><strong>Nutrimove Fit</strong> · Mamadou Balde · Limmatstrasse 310, 8005 Zürich · mbalde@kvz-schule.ch</p>
       <h3>2. Welche Daten wir verarbeiten</h3>
       <ul><li><strong>Kontodaten:</strong> E-Mail, Passwort-Hash, Anzeigename</li><li><strong>Profildaten (optional):</strong> Körperdaten, Ziele, Allergien</li><li><strong>Nutzungsdaten:</strong> IP-Adresse, Zeitstempel, Request-IDs</li><li><strong>Uploads:</strong> Inhalte, Metadaten</li><li><strong>Zahlungsdaten:</strong> Transaktions-IDs via Stripe (keine vollständigen Kartennummern)</li><li><strong>Kommunikation:</strong> Support-Anfragen, Trainer-Nachrichten</li></ul>
       <h3>3. Zwecke der Verarbeitung</h3>
@@ -733,11 +1100,11 @@
       <h2>Impressum</h2>
       <p class="legal__date">Stand: 22. Februar 2026</p>
       <h3>Angaben gemäss Art. 3 UWG / Art. 5 DSG</h3>
-      <p><strong>NutriMove Fit</strong> — Einzelunternehmen (CH-OR)<br><strong>Inhaber:</strong> Mamadou Balde<br><strong>Adresse:</strong> Limmatstrasse 310, 8005 Zürich, Schweiz<br><strong>E-Mail:</strong> <a href="mailto:mbalde@kvz-schule.ch">mbalde@kvz-schule.ch</a></p>
+      <p><strong>Nutrimove Fit</strong> — Einzelunternehmen (CH-OR)<br><strong>Inhaber:</strong> Mamadou Balde<br><strong>Adresse:</strong> Limmatstrasse 310, 8005 Zürich, Schweiz<br><strong>E-Mail:</strong> <a href="mailto:mbalde@kvz-schule.ch">mbalde@kvz-schule.ch</a></p>
       <h3>Handelsregister</h3>
       <p>Kanton Zürich · UID: CHE-[wird nachgetragen] · Aufsichtsbehörde: EDÖB</p>
       <h3>Haftungsausschluss</h3>
-      <p>Alle Inhalte werden <strong>ohne Gewähr</strong> bereitgestellt. NutriMove Fit übernimmt keine Haftung für die Anwendung bereitgestellter Empfehlungen, Schäden oder technische Störungen. Der Dienst ersetzt <strong>keine medizinische Beratung</strong>. Jede Nutzerin und jeder Nutzer handelt auf eigenes Risiko.</p>
+      <p>Alle Inhalte werden <strong>ohne Gewähr</strong> bereitgestellt. Nutrimove Fit übernimmt keine Haftung für die Anwendung bereitgestellter Empfehlungen, Schäden oder technische Störungen. Der Dienst ersetzt <strong>keine medizinische Beratung</strong>. Jede Nutzerin und jeder Nutzer handelt auf eigenes Risiko.</p>
       <p>Soweit gesetzlich zulässig, ist jede Haftung für direkte, indirekte, zufällige oder Folgeschäden ausgeschlossen.</p>
       <h3>Zahlungen &amp; Stripe</h3>
       <p>Zahlungen werden über Stripe abgewickelt. Bei Fragen: <a href="mailto:mbalde@kvz-schule.ch">mbalde@kvz-schule.ch</a></p>
@@ -751,13 +1118,12 @@
 
 </main>
 
-<!-- ══════════ FOOTER ══════════ -->
 <footer class="footer">
   <div class="container footer__inner">
     <div class="footer__brand">
       <a href="#top" class="footer__logo">
-        <img src="nutrimove_logo.png" alt="NutriMove Fit" class="footer__logo-img" />
-        <span>NutriMove <span class="accent">Fit</span></span>
+        <img src="nutrimove_logo.png" alt="Nutrimove Fit" class="footer__logo-img" />
+        <span>Nutrimove <span class="accent">Fit</span></span>
       </a>
       <p class="footer__tagline">Dein All-in-One Tracker für Ernährung, Fitness &amp; Gesundheit.</p>
     </div>
@@ -792,10 +1158,85 @@
   </div>
   <div class="footer__bottom">
     <div class="container">
-      <p>&copy; 2026 NutriMove Fit · Mamadou Balde · Zürich, Schweiz</p>
+      <p>&copy; 2026 Nutrimove Fit · Mamadou Balde · Zürich, Schweiz</p>
     </div>
   </div>
 </footer>
+
+<!-- ══════════ APP PERMISSIONS MODAL ══════════ -->
+<div id="permissionsModal" class="modal" style="display:none;">
+  <div class="modal__overlay"></div>
+  <div class="modal__content">
+    <button class="modal__close" onclick="closePermissions()">✕</button>
+    <h2>🔐 App-Berechtigungen</h2>
+    <p style="margin-top: 1rem;">Nutrimove Fit benötigt folgende Berechtigungen für optimale Funktion:</p>
+    <div class="permissions__list" style="margin: 1.5rem 0;">
+      <div class="permission-item">
+        <input type="checkbox" id="perm-health" class="perm-check" checked />
+        <label for="perm-health">
+          <strong>🏥 Health / Fitness (HealthKit / Google Fit)</strong><br/>
+          <span style="font-size: 0.9rem; color: var(--text2);">Synchronisierung von Trainings- und Aktivitätsdaten</span>
+        </label>
+      </div>
+      <div class="permission-item">
+        <input type="checkbox" id="perm-photos" class="perm-check" />
+        <label for="perm-photos">
+          <strong>📸 Fotos & Medien</strong><br/>
+          <span style="font-size: 0.9rem; color: var(--text2);">Upload von Mahlzeits-Fotos</span>
+        </label>
+      </div>
+      <div class="permission-item">
+        <input type="checkbox" id="perm-location" class="perm-check" />
+        <label for="perm-location">
+          <strong>📍 Standort</strong><br/>
+          <span style="font-size: 0.9rem; color: var(--text2);">Fitnessstudios in deiner Nähe finden</span>
+        </label>
+      </div>
+      <div class="permission-item">
+        <input type="checkbox" id="perm-camera" class="perm-check" />
+        <label for="perm-camera">
+          <strong>📷 Kamera</strong><br/>
+          <span style="font-size: 0.9rem; color: var(--text2);">Schnelles Foto-Logging von Mahlzeiten</span>
+        </label>
+      </div>
+      <div class="permission-item">
+        <input type="checkbox" id="perm-contacts" class="perm-check" />
+        <label for="perm-contacts">
+          <strong>👥 Kontakte</strong><br/>
+          <span style="font-size: 0.9rem; color: var(--text2);">Trainingspartner & Freunde einladen</span>
+        </label>
+      </div>
+      <div class="permission-item">
+        <input type="checkbox" id="perm-calendar" class="perm-check" />
+        <label for="perm-calendar">
+          <strong>📅 Kalender</strong><br/>
+          <span style="font-size: 0.9rem; color: var(--text2);">Training automatisch hinzufügen</span>
+        </label>
+      </div>
+    </div>
+    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text2); padding: 1rem; background: var(--surface2); border-radius: var(--radius);">
+      <strong>🔒 Datenschutz:</strong> Du kannst Berechtigungen jederzeit in den Einstellungen ändern. Alle Daten werden verschlüsselt und sicher gespeichert.
+    </p>
+    <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+      <button class="btn btn--primary btn--block" onclick="savePermissions()">✓ Berechtigungen gewähren</button>
+      <button class="btn btn--ghost btn--block" onclick="closePermissions()">Später fragen</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ COOKIE CONSENT (DSGVO) ══════════ -->
+<div id="cookieConsent" class="cookie-consent" style="display:none;">
+  <div class="cookie-consent__inner">
+    <div class="cookie-consent__text">
+      <strong>🍪 Cookie-Hinweis</strong>
+      <p>Wir verwenden Cookies und lokale Speicherung für essenzielle Website-Funktionen. Weitere Infos findest du in unserer <a href="#legal" style="color:var(--lime);">Datenschutzerklärung</a>.</p>
+    </div>
+    <div class="cookie-consent__actions">
+      <button class="btn btn--primary btn--sm" onclick="acceptCookies()">Akzeptieren</button>
+      <button class="btn btn--ghost btn--sm" onclick="declineCookies()">Nur essenzielle</button>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
