@@ -719,10 +719,7 @@
             <li>Priority E-Mail-Support</li>
           </ul>
           <div class="price-card__actions">
-            <div class="stripe-buy-embed">
-              <stripe-buy-button buy-button-id="buy_btn_1T6BG020x7LNKgb3xkSAjZ3w" publishable-key="pk_live_51T2TMr2Ox7LNKgb3qn4kvxxf7MFYNTI8yGXKDlxbahfRrFdEvLgJv8eQzVoy65HCc2H40MX6IkXWvj5hSIJsCbz00mJZRUgu8"></stripe-buy-button>
-            </div>
-            <a href="https://buy.stripe.com/aFa7sE4rUcBccEdaPtfMA00" target="_blank" rel="noopener" class="btn btn--ghost btn--block">Direktlink öffnen</a>
+            <a href="https://buy.stripe.com/aFa7sE4rUcBccEdaPtfMA00" target="_blank" rel="noopener" class="btn btn--primary btn--block">Jetzt abonnieren</a>
             <p class="price-card__hint">Sichere Zahlung über Stripe · Sofortzugang nach Kauf</p>
           </div>
         </div>
@@ -1162,67 +1159,6 @@
     </div>
   </div>
 </footer>
-
-<!-- ══════════ APP PERMISSIONS MODAL ══════════ -->
-<div id="permissionsModal" class="modal" style="display:none;">
-  <div class="modal__overlay"></div>
-  <div class="modal__content">
-    <button class="modal__close" onclick="closePermissions()">✕</button>
-    <h2>🔐 App-Berechtigungen</h2>
-    <p style="margin-top: 1rem;">Nutrimove Fit benötigt folgende Berechtigungen für optimale Funktion:</p>
-    <div class="permissions__list" style="margin: 1.5rem 0;">
-      <div class="permission-item">
-        <input type="checkbox" id="perm-health" class="perm-check" checked />
-        <label for="perm-health">
-          <strong>🏥 Health / Fitness (HealthKit / Google Fit)</strong><br/>
-          <span style="font-size: 0.9rem; color: var(--text2);">Synchronisierung von Trainings- und Aktivitätsdaten</span>
-        </label>
-      </div>
-      <div class="permission-item">
-        <input type="checkbox" id="perm-photos" class="perm-check" />
-        <label for="perm-photos">
-          <strong>📸 Fotos & Medien</strong><br/>
-          <span style="font-size: 0.9rem; color: var(--text2);">Upload von Mahlzeits-Fotos</span>
-        </label>
-      </div>
-      <div class="permission-item">
-        <input type="checkbox" id="perm-location" class="perm-check" />
-        <label for="perm-location">
-          <strong>📍 Standort</strong><br/>
-          <span style="font-size: 0.9rem; color: var(--text2);">Fitnessstudios in deiner Nähe finden</span>
-        </label>
-      </div>
-      <div class="permission-item">
-        <input type="checkbox" id="perm-camera" class="perm-check" />
-        <label for="perm-camera">
-          <strong>📷 Kamera</strong><br/>
-          <span style="font-size: 0.9rem; color: var(--text2);">Schnelles Foto-Logging von Mahlzeiten</span>
-        </label>
-      </div>
-      <div class="permission-item">
-        <input type="checkbox" id="perm-contacts" class="perm-check" />
-        <label for="perm-contacts">
-          <strong>👥 Kontakte</strong><br/>
-          <span style="font-size: 0.9rem; color: var(--text2);">Trainingspartner & Freunde einladen</span>
-        </label>
-      </div>
-      <div class="permission-item">
-        <input type="checkbox" id="perm-calendar" class="perm-check" />
-        <label for="perm-calendar">
-          <strong>📅 Kalender</strong><br/>
-          <span style="font-size: 0.9rem; color: var(--text2);">Training automatisch hinzufügen</span>
-        </label>
-      </div>
-    </div>
-    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--text2); padding: 1rem; background: var(--surface2); border-radius: var(--radius);">
-      <strong>🔒 Datenschutz:</strong> Du kannst Berechtigungen jederzeit in den Einstellungen ändern. Alle Daten werden verschlüsselt und sicher gespeichert.
-    </p>
-    <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
-      <button class="btn btn--primary btn--block" onclick="savePermissions()">✓ Berechtigungen gewähren</button>
-      <button class="btn btn--ghost btn--block" onclick="closePermissions()">Später fragen</button>
-    </div>
-  </div>
-</div>
 
 <!-- ══════════ COOKIE CONSENT (DSGVO) ══════════ -->
 <div id="cookieConsent" class="cookie-consent" style="display:none;">
