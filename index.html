@@ -449,9 +449,9 @@
 
       <!-- Navigation Dots -->
       <div class="phones-dots">
-        <button class="dot active" data-slide="0"></button>
-        <button class="dot" data-slide="1"></button>
-        <button class="dot" data-slide="2"></button>
+        <button class="dot active" data-slide="0" aria-label="Slide 1: Dashboard"></button>
+        <button class="dot" data-slide="1" aria-label="Slide 2: Rezepte"></button>
+        <button class="dot" data-slide="2" aria-label="Slide 3: Analytics"></button>
       </div>
 
       <!-- Swipe Indicator -->
@@ -515,15 +515,15 @@
             <input type="number" class="cal-height" min="100" max="250" placeholder="z.B. 175" />
           </div>
           <div class="tool-input-group">
-            <label>Geschlecht:</label>
-            <select class="cal-gender">
+            <label for="cal-gender">Geschlecht:</label>
+            <select id="cal-gender" class="cal-gender">
               <option value="male">Männlich</option>
               <option value="female">Weiblich</option>
             </select>
           </div>
           <div class="tool-input-group">
-            <label>Aktivitätslevel:</label>
-            <select class="cal-activity">
+            <label for="cal-activity">Aktivitätslevel:</label>
+            <select id="cal-activity" class="cal-activity">
               <option value="1.2">Sitzend (wenig Bewegung)</option>
               <option value="1.375">Leicht aktiv (1–3x/Woche)</option>
               <option value="1.55">Moderat aktiv (3–5x/Woche)</option>
@@ -549,8 +549,8 @@
             <input type="number" class="ideal-height" min="100" max="250" placeholder="z.B. 175" />
           </div>
           <div class="tool-input-group">
-            <label>Geschlecht:</label>
-            <select class="ideal-gender">
+            <label for="ideal-gender">Geschlecht:</label>
+            <select id="ideal-gender" class="ideal-gender">
               <option value="male">Männlich</option>
               <option value="female">Weiblich</option>
             </select>
@@ -572,8 +572,8 @@
         <h3 class="tool-card__title">💪 Kalorienverbrauch</h3>
         <div class="tool-card__form">
           <div class="tool-input-group">
-            <label>Sportart:</label>
-            <select class="burn-sport">
+            <label for="burn-sport">Sportart:</label>
+            <select id="burn-sport" class="burn-sport">
               <option>— Wähle eine Sportart —</option>
               <option value="walking">Spazieren (5 km/h)</option>
               <option value="jogging">Joggen (8 km/h)</option>
