@@ -219,6 +219,15 @@
   justify-content: center;
 }
 
+/* Fix: 'Beliebt' / 'Empfohlen' badge gets clipped by parent overflow */
+.pricing__panel,
+.pricing__grid {
+  overflow: visible !important;
+}
+.pricing__panel .pricing__grid {
+  padding-top: 1.25rem;
+}
+
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    iPhone 17 â€” Ultra-Photorealistic Mockup
 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
@@ -240,8 +249,8 @@
   position: absolute;
   z-index: 3;
   background: linear-gradient(to right,
-    #6A6A6E 0%, #9A9AA2 20%, #C8C8CC 50%,
-    #98989E 80%, #5E5E62 100%
+    #1A1A1E 0%, #2C2C30 20%, #3A3A3E 50%,
+    #2A2A2E 80%, #1A1A1C 100%
   );
 }
 .iphone17__btn-action {
@@ -267,10 +276,10 @@
   width: 4px; height: 74px;
   border-radius: 0 3px 3px 0;
   background: linear-gradient(to left,
-    #6A6A6E 0%, #9A9AA2 20%, #C8C8CC 50%,
-    #98989E 80%, #5E5E62 100%
+    #1A1A1E 0%, #2C2C30 20%, #3A3A3E 50%,
+    #2A2A2E 80%, #1A1A1C 100%
   );
-  box-shadow: 2px 0 6px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.18);
+  box-shadow: 2px 0 6px rgba(0,0,0,.8), inset 0 1px 0 rgba(255,255,255,.05);
 }
 
 /* Titanium unibody â€” 20-stop multi-direction light simulation */
@@ -278,28 +287,29 @@
   position: relative;
   background:
     linear-gradient(168deg,
-      #E8E8EC 0%, #D0D0D6 4%,
-      #B2B2B8 10%, #989898 16%,
-      #B8B8BC 22%, #D4D4D8 28%,
-      #C2C2C6 35%, #A4A4A8 42%,
-      #C0C0C4 50%, #D8D8DC 58%,
-      #BCBCC0 65%, #A0A0A4 72%,
-      #BEBEC2 80%, #D2D2D6 88%,
-      #C6C6CA 94%, #B4B4B8 100%
+      #2E2E32 0%,
+      #1E1E22 8%,
+      #141416 20%,
+      #1A1A1E 35%,
+      #0C0C0E 50%,
+      #181820 65%,
+      #222226 80%,
+      #1A1A1E 100%
     );
   border-radius: 46px;
   padding: 11px;
   box-shadow:
-    /* Inner frame bevel highlights */
-    inset 0 0 0 1px rgba(255,255,255,.28),
-    inset 0 2px 4px rgba(255,255,255,.22),
-    inset 0 0 0 3px rgba(0,0,0,.45),
-    inset 0 -2px 4px rgba(0,0,0,.3),
+    /* Crisp bright rim at top-left edge (studio directional light) */
+    inset 1px 1px 0 rgba(255,255,255,.24),
+    inset -1px -1px 0 rgba(255,255,255,.04),
+    /* Fine inner recess line between frame and screen */
+    inset 0 0 0 2.5px rgba(0,0,0,.85),
+    inset 0 3px 10px rgba(0,0,0,.4),
     /* Outer casting shadow â€” multi-layer for soft photo look */
-    0 4px 8px rgba(0,0,0,.25),
-    0 12px 30px rgba(0,0,0,.35),
-    0 30px 80px rgba(0,0,0,.45),
-    0 60px 160px rgba(0,0,0,.35);
+    0 2px 4px rgba(0,0,0,.6),
+    0 8px 20px rgba(0,0,0,.55),
+    0 25px 60px rgba(0,0,0,.5),
+    0 50px 120px rgba(0,0,0,.4);
 }
 
 /* Top-left specular light ray on the metal */
@@ -309,10 +319,10 @@
   top: 0; left: 0; right: 0;
   height: 55%;
   border-radius: 46px 46px 200px 200px / 46px 46px 100px 100px;
-  background: linear-gradient(160deg,
-    rgba(255,255,255,.28) 0%,
-    rgba(255,255,255,.12) 25%,
-    transparent 55%
+  background: linear-gradient(138deg,
+    rgba(255,255,255,.13) 0%,
+    rgba(255,255,255,.05) 12%,
+    transparent 26%
   );
   pointer-events: none;
   z-index: 1;
@@ -325,8 +335,8 @@
   height: 45%;
   border-radius: 0 0 46px 46px;
   background: linear-gradient(340deg,
-    rgba(255,255,255,.12) 0%,
-    transparent 50%
+    rgba(255,255,255,.05) 0%,
+    transparent 40%
   );
   pointer-events: none;
   z-index: 1;
@@ -497,9 +507,9 @@
   align-items: center;
   padding: 10px 28px 12px;
   background: linear-gradient(168deg,
-    #D8D8DC 0%, #B8B8BC 25%,
-    #989898 50%, #B4B4B8 75%,
-    #CCCCCE 100%
+    #252528 0%, #1A1A1E 25%,
+    #101012 50%, #1C1C20 75%,
+    #222224 100%
   );
   border-radius: 0 0 46px 46px;
   margin-top: -11px;
@@ -519,11 +529,17 @@
   width: 18px; height: 5px;
   background: rgba(0,0,0,.0);
   box-shadow:
-    0 0 0 1px rgba(0,0,0,.55),
-    4px 0 0 rgba(0,0,0,.55),
-    8px 0 0 rgba(0,0,0,.55),
-    12px 0 0 rgba(0,0,0,.55),
-    16px 0 0 rgba(0,0,0,.55);
+    0 0 0 1px rgba(0,0,0,.9),
+    4px 0 0 rgba(0,0,0,.9),
+    8px 0 0 rgba(0,0,0,.9),
+    12px 0 0 rgba(0,0,0,.9),
+    16px 0 0 rgba(0,0,0,.9),
+    /* subtle inset light on each hole */
+    0 -1px 0 rgba(255,255,255,.04),
+    4px -1px 0 rgba(255,255,255,.04),
+    8px -1px 0 rgba(255,255,255,.04),
+    12px -1px 0 rgba(255,255,255,.04),
+    16px -1px 0 rgba(255,255,255,.04);
   border-radius: 1px;
   height: 5px;
 }
@@ -635,6 +651,7 @@
   border-radius: 12px;
   padding: 8px 12px;
   border: .5px solid rgba(255,255,255,.08);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 .i17-search-placeholder { font-size: 11px; color: #475569; }
@@ -694,6 +711,7 @@
   border-radius: 12px;
   padding: 9px 10px;
   border: .5px solid rgba(255,255,255,.06);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 .i17-stat-tile__val {
