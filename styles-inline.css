@@ -200,3 +200,21 @@
 /* Cookie consent tweaks */
 .cookie-consent { display: none; }
 .cookie-consent a { color: var(--lime); }
+
+/* ─── Hero single-column (phone removed) ─── */
+.hero__inner {
+  grid-template-columns: 1fr !important;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.hero__content {
+  opacity: 1 !important;
+  transform: none !important;
+}
+.hero__actions {
+  justify-content: center;
+}
+.hero__stores {
+  justify-content: center;
+}
