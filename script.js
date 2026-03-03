@@ -642,7 +642,7 @@
           throw new Error('Send failed');
         }
       } catch (err) {
-        formMsg.textContent = 'Senden fehlgeschlagen. Bitte per E-Mail an mbalde@kvz-schule.ch schreiben.';
+        formMsg.textContent = 'Senden fehlgeschlagen. Bitte per E-Mail an info.nutrimovefit@gmail.com schreiben.';
         formMsg.style.color = '#ef4444';
       }
     });
