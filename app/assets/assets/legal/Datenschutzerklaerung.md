@@ -6,7 +6,7 @@
 
 ## 1. Verantwortliche Stelle
 
-**Unternehmen:** NutriMove Fit
+**Unternehmen:** Nutrimove Fit
 **Verantwortlicher:** Mamadou Balde
 **Geschäftsadresse:** Freiestrasse 100, 8032 Zürich, Schweiz
 **E-Mail (Datenschutz):** info.nutrimovefit@gmail.com
@@ -43,7 +43,7 @@ Je nach Nutzung des Dienstes verarbeiten wir insbesondere folgende Kategorien pe
 ### 2.5 Zahlungsdaten
 
 - Transaktions-IDs und Zahlungsstatus (via Stripe)
-- Es werden **keine vollständigen Kreditkartennummern** durch NutriMove Fit gespeichert
+- Es werden **keine vollständigen Kreditkartennummern** durch Nutrimove Fit gespeichert
 
 ### 2.6 Kommunikation
 

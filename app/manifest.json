@@ -1,11 +1,11 @@
 {
-    "name": "NUTRIMOVE",
-    "short_name": "NUTRIMOVE",
+    "name": "Nutrimove Fit",
+    "short_name": "Nutrimove",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#111111",
     "theme_color": "#111111",
-    "description": "NUTRIMOVE – Ernährungsapp",
+    "description": "Nutrimove Fit – Trainings- & Ernährungsapp",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

@@ -6,13 +6,13 @@
 
 ## 1. Anbietende Partei und Geltungsbereich
 
-**Unternehmen:** NutriMove Fit
+**Unternehmen:** Nutrimove Fit
 **Inhaber:** Mamadou Balde
 **Adresse:** Freiestrasse 100, 8032 Zürich, Schweiz
 **E-Mail:** info.nutrimovefit@gmail.com
 **Support:** info.nutrimovefit@gmail.com
 
-Diese AGB gelten für sämtliche Nutzerinnen und Nutzer (nachfolgend «Kundinnen und Kunden»), die den Dienst NutriMove Fit (nachfolgend «Dienst») verwenden. Mit der Registrierung oder Nutzung des Dienstes erklären sich Kundinnen und Kunden mit diesen AGB einverstanden.
+Diese AGB gelten für sämtliche Nutzerinnen und Nutzer (nachfolgend «Kundinnen und Kunden»), die den Dienst Nutrimove Fit (nachfolgend «Dienst») verwenden. Mit der Registrierung oder Nutzung des Dienstes erklären sich Kundinnen und Kunden mit diesen AGB einverstanden.
 
 ---
 
